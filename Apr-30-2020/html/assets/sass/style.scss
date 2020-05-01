@@ -119,6 +119,7 @@ header {
 .details-area {
 
     div#infobox-wrapper {
+        margin-bottom: 80px;
         padding: 50px;
         background: $text-white;
         border-radius: 10px;
@@ -211,5 +212,6 @@ footer {
     p {
         color: $text-white;
         margin: 0;
+        font-size: 14px;
     }
 }

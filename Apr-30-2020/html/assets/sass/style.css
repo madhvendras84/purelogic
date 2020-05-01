@@ -102,6 +102,7 @@ header div#nav-wrapper form {
 }
 
 .details-area div#infobox-wrapper {
+  margin-bottom: 80px;
   padding: 50px;
   background: #fff;
   border-radius: 10px;
@@ -222,5 +223,6 @@ footer {
 footer p {
   color: #fff;
   margin: 0;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */
