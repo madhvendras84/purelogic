@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans|Nunito:400,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Nunito", sans-serif;
+  background-color: #F1F2F6;
+}
+
+header {
+  background-color: #fff;
+  height: 80px;
+}
+
+header div#nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header div#nav-wrapper .form-area {
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
+  width: 70%;
+}
+
+header div#nav-wrapper form {
+  display: inline-block;
+}
+
+.features-area {
+  padding: 50px 0;
+}
+
+.features-area h1.title {
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.features-area p.description {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+footer {
+  background: #212121;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+footer p {
+  color: #fff;
+  margin: 0;
+  font-size: 14px;
+}
+
+[data-toggle="collapse"] .fa:before {
+  content: "\f0d8";
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f0d7";
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Nunito:400,600,700&display=swap');
+
+$bgcolor: #F1F2F6;
+$primary-color: #EF1F27;
+$secondry-color: #333;
+$light-black: #666;
+$text-white: #fff;
+$text-yellow: rgb(255, 255, 0);
+
+$roboto: "Roboto",
+sans-serif;
+$nunito-sans: 'Nunito Sans',
+sans-serif;
+$nunito: 'Nunito',
+sans-serif;
+
+@mixin displayFlex($direction, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin textAlign($value) {
+    text-align: $value;
+}
+
+@mixin BackgroundImg($link, $size) {
+    background: {
+        image: $link;
+        size: $size;
+        position: center center;
+        repeat: no-repeat;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: $nunito;
+    background-color: $bgcolor;
+}
+
+header {
+    background-color: $text-white;
+    height: 80px;
+
+    div#nav-wrapper {
+
+        @include displayFlex(row, nowrap);
+        justify-content: space-between;
+
+        .form-area {
+            flex-basis: 1;
+            width: 70%;
+        }
+
+        form {
+            display: inline-block;
+        }
+
+    }
+}
+
+.features-area {
+    padding: 50px 0;
+
+    h1.title {
+        font-size: 38px;
+        font-weight: 900;
+    }
+
+    p.description {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+
+footer {
+    background: #212121;
+    height: 80px;
+    @include displayFlex(row, nowrap);
+    align-items: center;
+    text-align: center;
+
+    p {
+        color: $text-white;
+        margin: 0;
+        font-size: 14px;
+    }
+}
+
+[data-toggle="collapse"] .fa:before {  
+    content: "\f0d8";
+  }
+  
+  [data-toggle="collapse"].collapsed .fa:before {
+    content:  "\f0d7";
+  }
