@@ -51,7 +51,6 @@ body {
 
 header {
     background-color: $text-white;
-    height: 80px;
 
     div#nav-wrapper {
 
@@ -61,10 +60,93 @@ header {
         .form-area {
             flex-basis: 1;
             width: 70%;
+
+            h1#logo {
+                margin-bottom: 0;
+            }
         }
 
         form {
             display: inline-block;
+        }
+
+    }
+}
+
+footer {
+    background: #212121;
+    height: 60px;
+    @include displayFlex(row, nowrap);
+    align-items: center;
+    text-align: center;
+
+    p {
+        color: $text-white;
+        margin: 0;
+        font-size: 14px;
+    }
+}
+
+@media(min-width: 768px) {
+    .form-area {
+
+        form#mooc-search {
+            width: 50% !important;
+            position: relative;
+            margin-left: 30px;
+
+            &::after {
+                content: "\f140";
+                font-family: "fontAwesome";
+                position: absolute;
+                right: 12px;
+                top: 6px;
+                font-size: 1rem;
+                color: #036BFA;
+            }
+
+            &::before {
+                content: "\f002";
+                position: absolute;
+                left: 16px;
+                top: 6px;
+                font-family: "fontAwesome";
+                font-size: 1rem;
+                color: #b7b7b7;
+            }
+
+            input.form-control {
+                width: 100% !important;
+                border-radius: 25px;
+                padding: 0 35px;
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 992px) {
+
+    nav {
+        li.nav-item {
+
+            &.active {
+                background: #036BFA;
+                border-radius: 25px;
+                padding: 0px 16px;
+
+                & a {
+                    color: $text-white !important;
+                }
+            }
+
+            a {
+                font-weight: 600;
+                color: $secondry-color !important;
+            }
         }
 
     }
@@ -202,16 +284,3 @@ header {
     }
 }
 
-footer {
-    background: #212121;
-    height: 80px;
-    @include displayFlex(row, nowrap);
-    align-items: center;
-    text-align: center;
-
-    p {
-        color: $text-white;
-        margin: 0;
-        font-size: 14px;
-    }
-}
