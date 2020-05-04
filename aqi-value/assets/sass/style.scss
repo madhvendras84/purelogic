@@ -284,3 +284,45 @@ footer {
     }
 }
 
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    section.features-area .col-md-2 {
+        min-width: 33.33%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+    form#mooc-search {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-compare {
+        flex-flow: row wrap;
+    }
+
+    .do,
+    .dont {
+        width: 100% !important;
+        margin: 10px 0;
+    }
+
+    .image-box {
+        display: none;
+    }
+
+    div#infobox-wrapper {
+        padding: 20px !important;
+    }
+
+    h1.title.text-center {
+        font-size: 2rem;
+    }
+
+    p.description.text-center {
+        font-size: 1rem;
+    }
+}
