@@ -138,43 +138,118 @@ footer p {
 }
 
 .features-area .row:nth-child(2) {
-  margin: 50px 0;
+  margin: 10px 0;
 }
 
-.features-area .qr-scanner-wrapper {
+.features-area div#qrscanner {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #00000020;
+  margin-bottom: 50px;
+}
+
+.features-area div#qr-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.features-area div#qr-wrapper div {
+  margin: 20px 30px;
+  text-align: center;
+}
+
+.features-area div#qr-wrapper .mobile-wrapper img {
+  width: 80%;
+}
+
+.features-area div#qr-wrapper .qr-scanner-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.features-area .qr-scanner-wrapper p {
-  text-align: center;
-  font-weight: 700;
-  margin-top: 1rem;
-  margin: 1rem 4rem;
-}
-
-.features-area img {
-  width: 30%;
-}
-
-.features-area .mobile-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.features-area div#qr-wrapper .qr-scanner-wrapper img {
+  width: 180px;
+}
+
+.features-area div#qr-wrapper .qr-scanner-wrapper img:last-child {
+  width: 250px !important;
+}
+
+.features-area div#qr-wrapper .qr-scanner-wrapper p {
+  margin: 25px 0;
+  font-weight: 800;
+}
+
+.features-area div#main-features h1.title {
+  margin: 0 20px;
+}
+
+.features-area div#main-features .cards-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+.features-area div#main-features .cards-wrapper .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  border-radius: 15px;
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
+  width: 48%;
+  margin: 5px;
+  padding: 20px;
+}
+
+.features-area div#main-features .cards-wrapper div#icon-box img {
+  width: 40px;
+}
+
+.features-area div#main-features .cards-wrapper div#icon-description {
+  padding-left: 20px;
+}
+
+.features-area div#main-features .cards-wrapper div#icon-description h6.subtitle {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.features-area div#main-features .cards-wrapper div#icon-description p.description {
+  font-weight: 500;
+  font-size: 14px;
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
@@ -190,11 +265,20 @@ footer p {
 }
 
 @media (max-width: 768px) {
-  h1.title.text-center {
+  h1.title {
     font-size: 2rem;
   }
   p.description.text-center {
     font-size: 1rem;
+  }
+  .card {
+    -ms-flex-preferred-size: 1;
+        flex-basis: 1;
+    min-width: 100%;
+  }
+  div#main-features h1 {
+    font-size: 1.8rem;
+    margin: 0 !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

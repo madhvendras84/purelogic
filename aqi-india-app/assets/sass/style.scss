@@ -165,31 +165,98 @@ footer {
         font-weight: 600;
     }
 
-    .row:nth-child(2){
-        margin: 50px 0;
+    .row:nth-child(2) {
+        margin: 10px 0;
     }
-    
-    .qr-scanner-wrapper {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: flex-start;
 
-        p {
+    div#qrscanner {
+        padding-bottom: 50px;
+        border-bottom: 1px solid #00000020;
+        margin-bottom: 50px;
+    }
+
+    div#qr-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
+
+
+        div {
+            margin: 20px 30px;
             text-align: center;
-            font-weight: 700;
-            margin-top: 1rem;
-            margin: 1rem 4rem;
+        }
+
+        .mobile-wrapper img {
+            width: 80%;
+
+        }
+
+        .qr-scanner-wrapper {
+
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+
+            img {
+
+                width: 180px;
+            }
+
+            img:last-child {
+                width: 250px !important;
+            }
+
+            p {
+                margin: 25px 0;
+                font-weight: 800;
+            }
         }
     }
-    
-    img {
-        width: 30%;
-    }
-    
-    .mobile-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    div#main-features {
+
+        h1.title {
+            margin: 0 20px;
+        }
+
+        .cards-wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            margin: 20px 0;
+
+
+            .card {
+                display: flex;
+                flex-flow: row nowrap;
+                border-radius: 15px;
+                flex-basis: 1;
+                width: 48%;
+                margin: 5px;
+                padding: 20px;
+
+            }
+
+            div#icon-box img {
+                width: 40px;
+            }
+
+            div#icon-description {
+                padding-left: 20px;
+
+                h6.subtitle {
+                    font-weight: 900;
+                    font-size: 16px;
+                }
+
+                p.description {
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+            }
+        }
     }
 
 }
@@ -209,11 +276,22 @@ footer {
 }
 
 @media (max-width: 768px) {
-    h1.title.text-center {
+    h1.title {
         font-size: 2rem;
     }
 
     p.description.text-center {
         font-size: 1rem;
     }
+
+    .card {
+        flex-basis: 1;
+        min-width: 100%;
+    }
+
+    div#main-features h1 {
+        font-size: 1.8rem;
+        margin: 0 !important;
+    }
+
 }
