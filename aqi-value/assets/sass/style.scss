@@ -126,6 +126,26 @@ footer {
             }
         }
     }
+
+    section.features-area {
+
+        .col-md-2.col-sm-2:last-child div#card-image img {
+            min-width: 70px;
+            height: 70px;
+        }
+
+        div#card-image {
+            display: flex;
+            align-items: center;
+            height: 100px !important;
+
+            img {
+                min-width: 50px;
+                height: auto;
+            }
+        }
+    }
+
 }
 
 @media(min-width: 992px) {

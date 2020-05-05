@@ -106,6 +106,23 @@ footer p {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+  section.features-area .col-md-2.col-sm-2:last-child div#card-image img {
+    min-width: 70px;
+    height: 70px;
+  }
+  section.features-area div#card-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100px !important;
+  }
+  section.features-area div#card-image img {
+    min-width: 50px;
+    height: auto;
+  }
 }
 
 @media (min-width: 992px) {
