@@ -1,4 +1,4 @@
-$turbo-yellow: #ffcc19;
+$turbo-yellow: #f8f8f8; //linear-gradient(to right, #00c6ff, #0072ff);
 $turbo-yellow-10: lighten($turbo-yellow, 40%);
 $turbo-yellow-20: lighten($turbo-yellow, 30%);
 $turbo-yellow-30: lighten($turbo-yellow, 20%);
@@ -48,7 +48,7 @@ $turbo-yellow-90: darken($turbo-yellow, 40%);
 
 p {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 1.7em;
     color: #666;
@@ -133,8 +133,8 @@ $text-sidebar-hover : #6b6b6b /*#fff*/;
 }
 
 #sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
+    padding: 10px 20px;
+    font-size: 1rem;
     display: block;
 }
 
@@ -195,10 +195,56 @@ a.article:hover {
 
 #content {
     width: 100%;
-    padding: 20px;
+    padding: 20px 50px;
     min-height: 100vh;
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
+
+/* ---------------------------------------------------
+    TABLE STYLE
+----------------------------------------------------- */
+section#global {
+    p strong{
+        font-weight: 700;
+        color: #444;
+
+    }
+}
+
+div#indian-aqi {
+    display: none;
+}
+
+div#aqi-table-IN{
+    margin: 1.8rem 0;
+
+    tbody td p{
+    margin: 0;
+    line-height: 1.2;
+    }
+}
+
+div#aqi-table-US{
+    margin: 1.8rem 0;
+
+    tbody td p{
+    margin: 0;
+    line-height: 1.2;
+    }
+}
+
+div#aqi-pm10-compare {
+    margin: 1.8rem 0;
+
+    thead th p,
+    tbody td p {
+        margin: 0;
+        line-height: 1.2;
+
+    }
+}
+
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES
