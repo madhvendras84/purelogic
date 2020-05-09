@@ -10,38 +10,47 @@ $turbo-yellow-80: darken($turbo-yellow, 30%);
 $turbo-yellow-90: darken($turbo-yellow, 40%);
 
 .bg-turbo-yellow {
-  background-color: $turbo-yellow;
+    background-color: $turbo-yellow;
 }
+
 .bg-turbo-yellow-10 {
-  background-color: $turbo-yellow-10;
+    background-color: $turbo-yellow-10;
 }
+
 .bg-turbo-yellow-20 {
-  background-color: $turbo-yellow-20;
+    background-color: $turbo-yellow-20;
 }
+
 .bg-turbo-yellow-30 {
-  background-color: $turbo-yellow-30;
+    background-color: $turbo-yellow-30;
 }
+
 .bg-turbo-yellow-40 {
-  background-color: $turbo-yellow-40;
+    background-color: $turbo-yellow-40;
 }
+
 .bg-turbo-yellow-50 {
-  background-color: $turbo-yellow-50;
+    background-color: $turbo-yellow-50;
 }
+
 .bg-turbo-yellow-60 {
-  background-color: $turbo-yellow-60;
+    background-color: $turbo-yellow-60;
 }
+
 .bg-turbo-yellow-70 {
-  background-color: $turbo-yellow-70;
+    background-color: $turbo-yellow-70;
 }
+
 .bg-turbo-yellow-80 {
-  background-color: $turbo-yellow-80;
+    background-color: $turbo-yellow-80;
 }
+
 .bg-turbo-yellow-90 {
-  background-color: $turbo-yellow-90;
+    background-color: $turbo-yellow-90;
 }
-    
-  
-   body {
+
+
+body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
 }
@@ -69,6 +78,8 @@ a:focus {
     border-radius: 0;
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
 }
 
 .navbar-btn {
@@ -88,15 +99,25 @@ a:focus {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
-$lila : $turbo-yellow /*#7386D5*/;
-$lila-60 : $turbo-yellow-60 /*#6d7fcc*/;
-$lila-line : $turbo-yellow-70 /*#47748b*/;
+$lila : $turbo-yellow
+/*#7386D5*/
+;
+$lila-60 : $turbo-yellow-60
+/*#6d7fcc*/
+;
+$lila-line : $turbo-yellow-70
+/*#47748b*/
+;
 
-$text-sidebar : #6b6b6b /*#fff*/;
-$text-sidebar-hover : #6b6b6b /*#fff*/;
+$text-sidebar : #6b6b6b
+/*#fff*/
+;
+$text-sidebar-hover : #6b6b6b
+/*#fff*/
+;
 
 .text-sidebar {
-  color: $text-sidebar;
+    color: $text-sidebar;
 }
 
 .wrapper {
@@ -107,10 +128,26 @@ $text-sidebar-hover : #6b6b6b /*#fff*/;
 
 #sidebar {
     min-width: 250px;
-    max-width: 250px;
     background: $lila;
     color: $text-sidebar;
-    transition: all 0.3s;
+    transition: all 0.5s;
+    position: fixed;
+    z-index: 99;
+
+    ul#scroll {
+        height: calc(100vh - 250px);
+        overflow-y: scroll;
+
+    }
+}
+
+.sidebar-main {
+    width: 270px;
+    transition: 0.5s;
+
+    &.activenow {
+        width: 0;
+    }
 }
 
 #sidebar.active {
@@ -119,7 +156,9 @@ $text-sidebar-hover : #6b6b6b /*#fff*/;
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background:$lila-60 /*#6d7fcc*/;
+    background: $lila-60
+        /*#6d7fcc*/
+    ;
 }
 
 #sidebar ul.components {
@@ -143,7 +182,8 @@ $text-sidebar-hover : #6b6b6b /*#fff*/;
     background: $text-sidebar-hover;
 }
 
-#sidebar ul li.active>a, a[aria-expanded="true"] {
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
     color: $text-sidebar;
     background: $lila-60;
 }
@@ -198,13 +238,14 @@ a.article:hover {
     padding: 20px 50px;
     min-height: 100vh;
     transition: all 0.5s;
+    position: relative;
 }
 
 /* ---------------------------------------------------
     TABLE STYLE
 ----------------------------------------------------- */
 section#global {
-    p strong{
+    p strong {
         font-weight: 700;
         color: #444;
 
@@ -215,21 +256,21 @@ div#indian-aqi {
     display: none;
 }
 
-div#aqi-table-IN{
+div#aqi-table-IN {
     margin: 1.8rem 0;
 
-    tbody td p{
-    margin: 0;
-    line-height: 1.2;
+    tbody td p {
+        margin: 0;
+        line-height: 1.2;
     }
 }
 
-div#aqi-table-US{
+div#aqi-table-US {
     margin: 1.8rem 0;
 
-    tbody td p{
-    margin: 0;
-    line-height: 1.2;
+    tbody td p {
+        margin: 0;
+        line-height: 1.2;
     }
 }
 
@@ -254,10 +295,33 @@ div#aqi-pm10-compare {
     #sidebar {
         margin-left: -250px;
     }
+
     #sidebar.active {
         margin-left: 0;
     }
+
     #sidebarCollapse span {
+        display: none;
+    }
+
+    .sidebar-header h3 {
+        position: relative;
+    }
+
+    .sidebar-header a#hideShow {
+        position: absolute;
+        top: 5px;
+        right: -5px;
+    }
+
+    .activenow {
+        width: unset;
+    }
+}
+
+
+@media (min-width: 768px) {
+    #hideShow {
         display: none;
     }
 }

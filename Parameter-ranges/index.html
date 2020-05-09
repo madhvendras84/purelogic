@@ -14,19 +14,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/sass/style.css" />
 
-    <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
-        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
-        crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
-        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
-        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <section id="global" class="pusher">
         <div class="wrapper">
             <!-- Sidebar  -->
+
+            <div class="sidebar-main">
             <nav id="sidebar">
                 <div class="sidebar-header">
                     <h3>
@@ -35,10 +30,11 @@
                                 alt="AQI India Logo" width="63px" />
                         </a>
                         India
+                        <a href="#" onclick="hideShow()" id="hideShow"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
                     </h3>
                 </div>
 
-                <ul class="list-unstyled components">
+                <ul class="list-unstyled components" id="scroll">
                     <p>
                         &nbsp; Dashboard
                         <i class="fa fa-tachometer" aria-hidden="true"></i>
@@ -75,26 +71,27 @@
 
                 <ul class="list-unstyled CTAs">
                     <li>
-                        <a href="#" class="download">Download source</a>
+                        <a href="https://pranaair.com" class="download">Download App</a>
                     </li>
                     <li>
                         <a href="https://aqi.in" class="article">Back to AQI</a>
                     </li>
                 </ul>
             </nav>
+            </div>
 
             <!-- Page Content  -->
             <div id="content">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
                         <button type="button" id="sidebarCollapse" class="btn text-sidebar bg-turbo-yellow">
-                            <i class="fas fa-align-left"></i>
+                            <i class="fa fa-align-left"></i>
                             <span></span>
                         </button>
                         <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button"
                             data-toggle="collapse" data-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="fas fa-align-justify"></i>
+                            <i class="fa fa-align-justify"></i>
                         </button>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -1468,9 +1465,9 @@
     <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
     <!-- Popper.JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -1479,6 +1476,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+     <!-- Font Awesome JS
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+    crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+    crossorigin="anonymous"></script> -->
     <!-- Custom JS -->
     <script src="assets/js/custom.js"></script>
 </body>
