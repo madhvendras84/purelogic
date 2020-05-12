@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit:400,600|Nunito:400,600,700,800,900&display=swap");
+
+$turbo-gray: #f8f8f8;
+$good: #34a12b;
+$moderate: #d4cc0f;
+$poor: #e9572a;
+$unhealthy: #ec4d9f;
+$severe: #9858a2;
+$hazard: #c11e2f;
+
+$turbo-gray-10: lighten($turbo-gray, 40%);
+$turbo-gray-20: lighten($turbo-gray, 30%);
+$turbo-gray-30: lighten($turbo-gray, 20%);
+$turbo-gray-40: lighten($turbo-gray, 10%);
+$turbo-gray-50: lighten($turbo-gray, 0%);
+$turbo-gray-60: darken($turbo-gray, 10%);
+$turbo-gray-70: darken($turbo-gray, 20%);
+$turbo-gray-80: darken($turbo-gray, 30%);
+$turbo-gray-90: darken($turbo-gray, 40%);
+
+.bg-turbo-gray {
+  background-color: $turbo-gray;
+}
+
+.bg-turbo-gray-10 {
+  background-color: $turbo-gray-10;
+}
+
+.bg-turbo-gray-20 {
+  background-color: $turbo-gray-20;
+}
+
+.bg-turbo-gray-30 {
+  background-color: $turbo-gray-30;
+}
+
+.bg-turbo-gray-40 {
+  background-color: $turbo-gray-40;
+}
+
+.bg-turbo-gray-50 {
+  background-color: $turbo-gray-50;
+}
+
+.bg-turbo-gray-60 {
+  background-color: $turbo-gray-60;
+}
+
+.bg-turbo-gray-70 {
+  background-color: $turbo-gray-70;
+}
+
+.bg-turbo-gray-80 {
+  background-color: $turbo-gray-80;
+}
+
+.bg-turbo-gray-90 {
+  background-color: $turbo-gray-90;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: #fafafa;
+}
+
+p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.7em;
+  color: #666;
+}
+
+h5,
+p strong {
+  font-family: kanit;
+  font-weight: 600;
+}
+
+ul#scroll > p {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+}
+
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+$lila: $turbo-gray /*#7386D5*/;
+$lila-60: $turbo-gray-60 /*#6d7fcc*/;
+$lila-line: $turbo-gray-70 /*#47748b*/;
+
+$text-sidebar: #6b6b6b /*#fff*/;
+$text-sidebar-hover: #6b6b6b /*#fff*/;
+
+.text-sidebar {
+  color: $text-sidebar;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 250px;
+  background: $lila;
+  color: $text-sidebar;
+  transition: all 0.5s;
+  position: fixed;
+  z-index: 99;
+
+  ul#scroll {
+    height: calc(100vh - 250px);
+    overflow-y: scroll;
+  }
+}
+
+.sidebar-main {
+  width: 270px;
+  transition: 0.5s;
+
+  &.activenow {
+    width: 0;
+  }
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: $lila-60 /*#6d7fcc*/;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid $lila-line;
+}
+
+#sidebar ul p {
+  color: $text-sidebar;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px 20px;
+  font-size: 1rem;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: $lila;
+  background: $text-sidebar-hover;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: $text-sidebar;
+  background: $lila-60;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: $lila-60;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+a.download {
+  background: $text-sidebar;
+  color: $lila;
+}
+
+a.article,
+a.article:hover {
+  background: $lila-60 !important;
+  color: $text-sidebar !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+  width: 100%;
+  padding: 20px 50px;
+  min-height: 100vh;
+  transition: all 0.5s;
+  position: relative;
+}
+
+/* ---------------------------------------------------
+    TABLE STYLE
+----------------------------------------------------- */
+section#global {
+  p strong {
+    font-weight: 700;
+    color: #444;
+  }
+}
+
+div#indian-aqi {
+  display: none;
+}
+
+div#aqi-table-IN {
+  margin: 1.8rem 0;
+
+  tbody td p {
+    margin: 0;
+    line-height: 1.2;
+  }
+}
+
+div#aqi-table-US {
+  margin: 1.8rem 0;
+
+  tbody td p {
+    margin: 0;
+    line-height: 1.2;
+  }
+}
+
+div#aqi-pm10-compare {
+  margin: 1.8rem 0;
+
+  thead th p,
+  tbody td p {
+    margin: 0;
+    line-height: 1.2;
+  }
+}
+
+/* ---------------------------------------------------
+    CARD STYLING FOR THE CONTENT AREA
+----------------------------------------------------- */
+
+div#content div.line + div {
+  background-color: #fff;
+  margin-top: 0px;
+  border-radius: 10px;
+  text-align: left;
+  padding: 25px 35px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  h5 {
+    margin: 20px 0px;
+  }
+
+  p {
+    margin: 0px 0px 15px 0px;
+    padding: 0px;
+  }
+}
+
+/* ---------------------------------------------------
+    BLINK ANIMATION
+----------------------------------------------------- */
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+#blink {
+  animation: blink 2s ease-in infinite;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 1200px) {
+  #sidebar {
+    min-width: 190px;
+  }
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    min-width: 200px;
+  }
+
+  #content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+
+  #sidebar.active {
+    margin-left: 0;
+  }
+
+  .sidebar-main {
+    width: 0;
+  }
+
+  #sidebarCollapse span {
+    display: none;
+  }
+
+  .sidebar-header h3 {
+    position: relative;
+  }
+
+  .sidebar-header a#hideShow {
+    position: absolute;
+    top: 5px;
+    right: -5px;
+  }
+}
+
+@media (min-width: 768px) {
+  #hideShow {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------
+    Colors for aqi Data
+----------------------------------------------------- */
+
+.indian-aqi,
+.us-aqi,
+.pm2-5,
+.pm10,
+.co2,
+.co,
+.oxygen,
+.ozone,
+.no2 {
+  div#aqi-table-IN,
+  div#aqi-table-US {
+    tbody tr {
+      &:nth-child(1) td:first-child p {
+        color: $good;
+      }
+
+      &:nth-child(2) td:first-child p {
+        color: $moderate;
+      }
+
+      &:nth-child(3) td:first-child p {
+        color: $poor;
+      }
+
+      &:nth-child(4) td:first-child p {
+        color: $unhealthy;
+      }
+
+      &:nth-child(5) td:first-child p {
+        color: $severe;
+      }
+
+      &:nth-child(6) td:first-child p {
+        color: $hazard;
+      }
+    }
+  }
+}
+
+.indian-aqi,
+.us-aqi {
+  div#aqi-pm10-compare {
+    tbody tr {
+      margin: 2px 0 !important;
+
+      &:nth-child(1) td:nth-child(2) {
+        border-right: 5px solid $hazard;
+        border-left: 5px solid $hazard;
+      }
+
+      &:nth-child(2) td:nth-child(2) {
+        border-right: 5px solid $severe;
+        border-left: 5px solid $severe;
+      }
+
+      &:nth-child(3) td:nth-child(2) {
+        border-right: 5px solid $unhealthy;
+        border-left: 5px solid $unhealthy;
+      }
+
+      &:nth-child(4) td:nth-child(2) {
+        border-right: 5px solid $poor;
+        border-left: 5px solid $poor;
+      }
+
+      &:nth-child(5) td:nth-child(2) {
+        border-right: 5px solid $moderate;
+        border-left: 5px solid $moderate;
+      }
+
+      &:nth-child(6) td:nth-child(2) {
+        border-right: 5px solid $good;
+        border-left: 5px solid $good;
+      }
+
+      td {
+        border: none;
+      }
+    }
+  }
+}
+
+.tvoc {
+  div#aqi-table-IN {
+    tbody tr {
+      &:nth-child(1) td:first-child {
+        color: $good;
+      }
+
+      &:nth-child(2) td:first-child {
+        color: $moderate;
+      }
+
+      &:nth-child(3) td:first-child {
+        color: $poor;
+      }
+
+      &:nth-child(4) td:first-child {
+        color: $unhealthy;
+      }
+    }
+  }
+}

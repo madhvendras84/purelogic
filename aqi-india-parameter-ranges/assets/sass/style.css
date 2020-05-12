@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit:400,600|Nunito:400,600,700,800,900&display=swap");
+.bg-turbo-gray {
+  background-color: #f8f8f8;
+}
+
+.bg-turbo-gray-10 {
+  background-color: white;
+}
+
+.bg-turbo-gray-20 {
+  background-color: white;
+}
+
+.bg-turbo-gray-30 {
+  background-color: white;
+}
+
+.bg-turbo-gray-40 {
+  background-color: white;
+}
+
+.bg-turbo-gray-50 {
+  background-color: #f8f8f8;
+}
+
+.bg-turbo-gray-60 {
+  background-color: #dfdfdf;
+}
+
+.bg-turbo-gray-70 {
+  background-color: #c5c5c5;
+}
+
+.bg-turbo-gray-80 {
+  background-color: #acacac;
+}
+
+.bg-turbo-gray-90 {
+  background-color: #929292;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: #fafafa;
+}
+
+p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.7em;
+  color: #666;
+}
+
+h5,
+p strong {
+  font-family: kanit;
+  font-weight: 600;
+}
+
+ul#scroll > p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-btn {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+/*#7386D5*/
+/*#6d7fcc*/
+/*#47748b*/
+/*#fff*/
+/*#fff*/
+.text-sidebar {
+  color: #6b6b6b;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+#sidebar {
+  min-width: 250px;
+  background: #f8f8f8;
+  color: #6b6b6b;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: fixed;
+  z-index: 99;
+}
+
+#sidebar ul#scroll {
+  height: calc(100vh - 250px);
+  overflow-y: scroll;
+}
+
+.sidebar-main {
+  width: 270px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.sidebar-main.activenow {
+  width: 0;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #dfdfdf;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+#sidebar ul p {
+  color: #6b6b6b;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px 20px;
+  font-size: 1rem;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: #f8f8f8;
+  background: #6b6b6b;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #6b6b6b;
+  background: #dfdfdf;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #dfdfdf;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+a.download {
+  background: #6b6b6b;
+  color: #f8f8f8;
+}
+
+a.article,
+a.article:hover {
+  background: #dfdfdf !important;
+  color: #6b6b6b !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+  width: 100%;
+  padding: 20px 50px;
+  min-height: 100vh;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+}
+
+/* ---------------------------------------------------
+    TABLE STYLE
+----------------------------------------------------- */
+section#global p strong {
+  font-weight: 700;
+  color: #444;
+}
+
+div#indian-aqi {
+  display: none;
+}
+
+div#aqi-table-IN {
+  margin: 1.8rem 0;
+}
+
+div#aqi-table-IN tbody td p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+div#aqi-table-US {
+  margin: 1.8rem 0;
+}
+
+div#aqi-table-US tbody td p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+div#aqi-pm10-compare {
+  margin: 1.8rem 0;
+}
+
+div#aqi-pm10-compare thead th p,
+div#aqi-pm10-compare tbody td p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* ---------------------------------------------------
+    CARD STYLING FOR THE CONTENT AREA
+----------------------------------------------------- */
+div#content div.line + div {
+  background-color: #fff;
+  margin-top: 0px;
+  border-radius: 10px;
+  text-align: left;
+  padding: 25px 35px;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 50px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+div#content div.line + div h5 {
+  margin: 20px 0px;
+}
+
+div#content div.line + div p {
+  margin: 0px 0px 15px 0px;
+  padding: 0px;
+}
+
+/* ---------------------------------------------------
+    BLINK ANIMATION
+----------------------------------------------------- */
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+#blink {
+  -webkit-animation: blink 2s ease-in infinite;
+          animation: blink 2s ease-in infinite;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 1200px) {
+  #sidebar {
+    min-width: 190px;
+  }
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    min-width: 200px;
+  }
+  #content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  .sidebar-main {
+    width: 0;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
+  .sidebar-header h3 {
+    position: relative;
+  }
+  .sidebar-header a#hideShow {
+    position: absolute;
+    top: 5px;
+    right: -5px;
+  }
+}
+
+@media (min-width: 768px) {
+  #hideShow {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------
+    Colors for aqi Data
+----------------------------------------------------- */
+.indian-aqi div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
+.indian-aqi div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
+.us-aqi div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
+.us-aqi div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
+.pm2-5 div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
+.pm2-5 div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
+.pm10 div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
+.pm10 div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
+.co2 div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
+.co2 div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
+.co div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
+.co div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
+.oxygen div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
+.oxygen div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
+.ozone div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
+.ozone div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
+.no2 div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
+.no2 div#aqi-table-US tbody tr:nth-child(1) td:first-child p {
+  color: #34a12b;
+}
+
+.indian-aqi div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
+.indian-aqi div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
+.us-aqi div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
+.us-aqi div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
+.pm2-5 div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
+.pm2-5 div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
+.pm10 div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
+.pm10 div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
+.co2 div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
+.co2 div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
+.co div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
+.co div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
+.oxygen div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
+.oxygen div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
+.ozone div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
+.ozone div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
+.no2 div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
+.no2 div#aqi-table-US tbody tr:nth-child(2) td:first-child p {
+  color: #d4cc0f;
+}
+
+.indian-aqi div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
+.indian-aqi div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
+.us-aqi div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
+.us-aqi div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
+.pm2-5 div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
+.pm2-5 div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
+.pm10 div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
+.pm10 div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
+.co2 div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
+.co2 div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
+.co div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
+.co div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
+.oxygen div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
+.oxygen div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
+.ozone div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
+.ozone div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
+.no2 div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
+.no2 div#aqi-table-US tbody tr:nth-child(3) td:first-child p {
+  color: #e9572a;
+}
+
+.indian-aqi div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
+.indian-aqi div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
+.us-aqi div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
+.us-aqi div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
+.pm2-5 div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
+.pm2-5 div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
+.pm10 div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
+.pm10 div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
+.co2 div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
+.co2 div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
+.co div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
+.co div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
+.oxygen div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
+.oxygen div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
+.ozone div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
+.ozone div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
+.no2 div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
+.no2 div#aqi-table-US tbody tr:nth-child(4) td:first-child p {
+  color: #ec4d9f;
+}
+
+.indian-aqi div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
+.indian-aqi div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
+.us-aqi div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
+.us-aqi div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
+.pm2-5 div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
+.pm2-5 div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
+.pm10 div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
+.pm10 div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
+.co2 div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
+.co2 div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
+.co div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
+.co div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
+.oxygen div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
+.oxygen div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
+.ozone div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
+.ozone div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
+.no2 div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
+.no2 div#aqi-table-US tbody tr:nth-child(5) td:first-child p {
+  color: #9858a2;
+}
+
+.indian-aqi div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
+.indian-aqi div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
+.us-aqi div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
+.us-aqi div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
+.pm2-5 div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
+.pm2-5 div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
+.pm10 div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
+.pm10 div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
+.co2 div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
+.co2 div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
+.co div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
+.co div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
+.oxygen div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
+.oxygen div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
+.ozone div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
+.ozone div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
+.no2 div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
+.no2 div#aqi-table-US tbody tr:nth-child(6) td:first-child p {
+  color: #c11e2f;
+}
+
+.indian-aqi div#aqi-pm10-compare tbody tr,
+.us-aqi div#aqi-pm10-compare tbody tr {
+  margin: 2px 0 !important;
+}
+
+.indian-aqi div#aqi-pm10-compare tbody tr:nth-child(1) td:nth-child(2),
+.us-aqi div#aqi-pm10-compare tbody tr:nth-child(1) td:nth-child(2) {
+  border-right: 5px solid #c11e2f;
+  border-left: 5px solid #c11e2f;
+}
+
+.indian-aqi div#aqi-pm10-compare tbody tr:nth-child(2) td:nth-child(2),
+.us-aqi div#aqi-pm10-compare tbody tr:nth-child(2) td:nth-child(2) {
+  border-right: 5px solid #9858a2;
+  border-left: 5px solid #9858a2;
+}
+
+.indian-aqi div#aqi-pm10-compare tbody tr:nth-child(3) td:nth-child(2),
+.us-aqi div#aqi-pm10-compare tbody tr:nth-child(3) td:nth-child(2) {
+  border-right: 5px solid #ec4d9f;
+  border-left: 5px solid #ec4d9f;
+}
+
+.indian-aqi div#aqi-pm10-compare tbody tr:nth-child(4) td:nth-child(2),
+.us-aqi div#aqi-pm10-compare tbody tr:nth-child(4) td:nth-child(2) {
+  border-right: 5px solid #e9572a;
+  border-left: 5px solid #e9572a;
+}
+
+.indian-aqi div#aqi-pm10-compare tbody tr:nth-child(5) td:nth-child(2),
+.us-aqi div#aqi-pm10-compare tbody tr:nth-child(5) td:nth-child(2) {
+  border-right: 5px solid #d4cc0f;
+  border-left: 5px solid #d4cc0f;
+}
+
+.indian-aqi div#aqi-pm10-compare tbody tr:nth-child(6) td:nth-child(2),
+.us-aqi div#aqi-pm10-compare tbody tr:nth-child(6) td:nth-child(2) {
+  border-right: 5px solid #34a12b;
+  border-left: 5px solid #34a12b;
+}
+
+.indian-aqi div#aqi-pm10-compare tbody tr td,
+.us-aqi div#aqi-pm10-compare tbody tr td {
+  border: none;
+}
+
+.tvoc div#aqi-table-IN tbody tr:nth-child(1) td:first-child {
+  color: #34a12b;
+}
+
+.tvoc div#aqi-table-IN tbody tr:nth-child(2) td:first-child {
+  color: #d4cc0f;
+}
+
+.tvoc div#aqi-table-IN tbody tr:nth-child(3) td:first-child {
+  color: #e9572a;
+}
+
+.tvoc div#aqi-table-IN tbody tr:nth-child(4) td:first-child {
+  color: #ec4d9f;
+}
+/*# sourceMappingURL=style.css.map */
