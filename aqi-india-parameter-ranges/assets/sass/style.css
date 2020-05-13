@@ -85,7 +85,7 @@ a:focus {
 
 .navbar {
   padding: 15px 10px;
-  background: #fff;
+  background: #239fd3;
   border: none;
   border-radius: 0;
   margin-bottom: 40px;
@@ -94,6 +94,7 @@ a:focus {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 999;
 }
 
 .navbar-btn {
@@ -139,7 +140,7 @@ a:focus {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   position: fixed;
-  z-index: 99;
+  z-index: 99999;
 }
 
 #sidebar ul#scroll {
@@ -225,8 +226,14 @@ ul.CTAs a {
 }
 
 a.download {
-  background: #6b6b6b;
+  background: #239fd3;
   color: #f8f8f8;
+}
+
+a.download:hover {
+  background: #48b4e1 !important;
+  -webkit-box-shadow: 2px 4px 8px 0px #48b4e1;
+          box-shadow: 2px 4px 8px 0px #48b4e1;
 }
 
 a.article,
@@ -245,6 +252,11 @@ a.article:hover {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   position: relative;
+}
+
+#content .navbar-light .navbar-nav .nav-link,
+#content .text-sidebar {
+  color: #fff !important;
 }
 
 /* ---------------------------------------------------
@@ -306,6 +318,10 @@ div#content div.line + div {
 
 div#content div.line + div h5 {
   margin: 20px 0px;
+}
+
+div#content div.line + div h5#sub-title {
+  color: #239fd3;
 }
 
 div#content div.line + div p {
@@ -574,5 +590,159 @@ div#content div.line + div p {
 
 .tvoc div#aqi-table-IN tbody tr:nth-child(4) td:first-child {
   color: #ec4d9f;
+}
+
+/* ---------------------------------------------------
+    Layout change Codes
+----------------------------------------------------- */
+.prana-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.prana-container p {
+  width: 60%;
+}
+
+.prana-container .image-wrapper {
+  width: 40%;
+  text-align: center;
+}
+
+.prana-container .image-wrapper img {
+  width: 80%;
+  border: 1px solid lightgray;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.prana-container .image-wrapper img:hover {
+  opacity: 0.9;
+  -webkit-transition: 0.5s ease infinite;
+  transition: 0.5s ease infinite;
+}
+
+.AQI-categories {
+  padding: 1rem 0;
+  background-size: cover;
+}
+
+.AQI-categories .card {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.AQI-categories .card-title {
+  padding-top: 0.5em;
+}
+
+.AQI-categories a:hover {
+  text-decoration: none;
+}
+
+.AQI-categories .col-md-4:nth-child(1) .service-card {
+  background: #34a12b;
+  border: 0;
+}
+
+.AQI-categories .col-md-4:nth-child(1) .service-card:hover {
+  background: #41c936 !important;
+  -webkit-box-shadow: 2px 4px 8px 0px #41c936;
+          box-shadow: 2px 4px 8px 0px #41c936;
+}
+
+.AQI-categories .col-md-4:nth-child(2) .service-card {
+  background: #d4cc0f;
+  border: 0;
+}
+
+.AQI-categories .col-md-4:nth-child(2) .service-card:hover {
+  background: #f0e726 !important;
+  -webkit-box-shadow: 2px 4px 8px 0px #f0e726;
+          box-shadow: 2px 4px 8px 0px #f0e726;
+}
+
+.AQI-categories .col-md-4:nth-child(3) .service-card {
+  background: #e9572a;
+  border: 0;
+}
+
+.AQI-categories .col-md-4:nth-child(3) .service-card:hover {
+  background: #ee7b58 !important;
+  -webkit-box-shadow: 2px 4px 8px 0px #ee7b58;
+          box-shadow: 2px 4px 8px 0px #ee7b58;
+}
+
+.AQI-categories .col-md-4:nth-child(4) .service-card {
+  background: #ec4d9f;
+  border: 0;
+}
+
+.AQI-categories .col-md-4:nth-child(4) .service-card:hover {
+  background: #f17bb8 !important;
+  -webkit-box-shadow: 2px 4px 8px 0px #f17bb8;
+          box-shadow: 2px 4px 8px 0px #f17bb8;
+}
+
+.AQI-categories .col-md-4:nth-child(5) .service-card {
+  background: #9858a2;
+  border: 0;
+}
+
+.AQI-categories .col-md-4:nth-child(5) .service-card:hover {
+  background: #ad78b5 !important;
+  -webkit-box-shadow: 2px 4px 8px 0px #ad78b5;
+          box-shadow: 2px 4px 8px 0px #ad78b5;
+}
+
+.AQI-categories .col-md-4:nth-child(6) .service-card {
+  background: #c11e2f;
+  border: 0;
+}
+
+.AQI-categories .col-md-4:nth-child(6) .service-card:hover {
+  background: #df3345 !important;
+  -webkit-box-shadow: 2px 4px 8px 0px #df3345;
+          box-shadow: 2px 4px 8px 0px #df3345;
+}
+
+.AQI-categories .service-card .card-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+  height: 187px;
+}
+
+.AQI-categories .service-card .card-block img {
+  max-width: 25%;
+  margin: 0 10px;
+}
+
+.AQI-categories .service-card .card-block h4.card-title {
+  margin: 0 10px;
+}
+
+.AQI-categories .service-card .card-block h4.card-title p {
+  color: #fff;
+  line-height: 1;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

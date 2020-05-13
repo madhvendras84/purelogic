@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit:400,600|Nunito:400,600,700,800,900&display=swap");
 
 $turbo-gray: #f8f8f8;
+$primary: #239fd3;
 $good: #34a12b;
 $moderate: #d4cc0f;
 $poor: #e9572a;
@@ -58,6 +59,17 @@ $turbo-gray-90: darken($turbo-gray, 40%);
   background-color: $turbo-gray-90;
 }
 
+@mixin background($color) {
+  background: $color;
+  border: 0;
+}
+
+@mixin light-background($color) {
+  $temp: lighten($color, 10%);
+  background: $temp !important;
+  box-shadow: 2px 4px 8px 0px $temp;
+}
+
 body {
   font-family: "Nunito", sans-serif;
   background: #fafafa;
@@ -94,13 +106,14 @@ a:focus {
 
 .navbar {
   padding: 15px 10px;
-  background: #fff;
+  background: $primary;
   border: none;
   border-radius: 0;
   margin-bottom: 40px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
+  z-index: 999;
 }
 
 .navbar-btn {
@@ -143,7 +156,7 @@ $text-sidebar-hover: #6b6b6b /*#fff*/;
   color: $text-sidebar;
   transition: all 0.5s;
   position: fixed;
-  z-index: 99;
+  z-index: 99999;
 
   ul#scroll {
     height: calc(100vh - 250px);
@@ -227,8 +240,12 @@ ul.CTAs a {
 }
 
 a.download {
-  background: $text-sidebar;
+  background: $primary;
   color: $lila;
+
+  &:hover {
+    @include light-background($primary);
+  }
 }
 
 a.article,
@@ -247,6 +264,11 @@ a.article:hover {
   min-height: 100vh;
   transition: all 0.5s;
   position: relative;
+
+  .navbar-light .navbar-nav .nav-link,
+  .text-sidebar {
+    color: #fff !important;
+  }
 }
 
 /* ---------------------------------------------------
@@ -308,6 +330,9 @@ div#content div.line + div {
 
   h5 {
     margin: 20px 0px;
+  }
+  h5#sub-title {
+    color: $primary;
   }
 
   p {
@@ -491,6 +516,119 @@ div#content div.line + div {
 
       &:nth-child(4) td:first-child {
         color: $unhealthy;
+      }
+    }
+  }
+}
+/* ---------------------------------------------------
+    Layout change Codes
+----------------------------------------------------- */
+.prana-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prana-container p {
+  width: 60%;
+}
+
+.prana-container .image-wrapper {
+  width: 40%;
+  text-align: center;
+
+  img {
+    width: 80%;
+    border: 1px solid lightgray;
+    padding: 5px;
+    border-radius: 5px;
+
+    &:hover {
+      opacity: 0.9;
+      transition: 0.5s ease infinite;
+    }
+  }
+}
+
+// cards
+
+.AQI-categories {
+  padding: 1rem 0;
+  background-size: cover;
+
+  .card {
+    transition: all 0.3s;
+  }
+
+  .card-title {
+    padding-top: 0.5em;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .col-md-4 {
+    &:nth-child(1) .service-card {
+      @include background($good);
+      &:hover {
+        @include light-background($good);
+      }
+    }
+    &:nth-child(2) .service-card {
+      @include background($moderate);
+      &:hover {
+        @include light-background($moderate);
+      }
+    }
+    &:nth-child(3) .service-card {
+      @include background($poor);
+      &:hover {
+        @include light-background($poor);
+      }
+    }
+    &:nth-child(4) .service-card {
+      @include background($unhealthy);
+      &:hover {
+        @include light-background($unhealthy);
+      }
+    }
+    &:nth-child(5) .service-card {
+      @include background($severe);
+      &:hover {
+        @include light-background($severe);
+      }
+    }
+    &:nth-child(6) .service-card {
+      @include background($hazard);
+      &:hover {
+        @include light-background($hazard);
+      }
+    }
+  }
+
+  .service-card {
+    .card-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+      height: 187px;
+
+      img {
+        max-width: 25%;
+        margin: 0 10px;
+      }
+
+      h4.card-title {
+        margin: 0 10px;
+
+        p {
+          color: #fff;
+          line-height: 1;
+          text-align: center;
+        }
       }
     }
   }
