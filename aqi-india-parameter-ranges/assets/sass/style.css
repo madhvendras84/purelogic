@@ -260,7 +260,7 @@ a.article:hover {
 }
 
 /* ---------------------------------------------------
-    TABLE STYLE
+    GLOBAL STYLING
 ----------------------------------------------------- */
 section#global p strong {
   font-weight: 700;
@@ -269,34 +269,6 @@ section#global p strong {
 
 div#indian-aqi {
   display: none;
-}
-
-div#aqi-table-IN {
-  margin: 1.8rem 0;
-}
-
-div#aqi-table-IN tbody td p {
-  margin: 0;
-  line-height: 1.2;
-}
-
-div#aqi-table-US {
-  margin: 1.8rem 0;
-}
-
-div#aqi-table-US tbody td p {
-  margin: 0;
-  line-height: 1.2;
-}
-
-div#aqi-pm10-compare {
-  margin: 1.8rem 0;
-}
-
-div#aqi-pm10-compare thead th p,
-div#aqi-pm10-compare tbody td p {
-  margin: 0;
-  line-height: 1.2;
 }
 
 /* ---------------------------------------------------
@@ -402,194 +374,82 @@ div#content div.line + div p {
 }
 
 /* ---------------------------------------------------
-    Colors for aqi Data
+    PM2.5 and PM10 calculation bar
 ----------------------------------------------------- */
-.indian-aqi div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
-.indian-aqi div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
-.us-aqi div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
-.us-aqi div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
-.pm2-5 div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
-.pm2-5 div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
-.pm10 div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
-.pm10 div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
-.co2 div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
-.co2 div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
-.co div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
-.co div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
-.oxygen div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
-.oxygen div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
-.ozone div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
-.ozone div#aqi-table-US tbody tr:nth-child(1) td:first-child p,
-.no2 div#aqi-table-IN tbody tr:nth-child(1) td:first-child p,
-.no2 div#aqi-table-US tbody tr:nth-child(1) td:first-child p {
-  color: #34a12b;
+div#calc-wrap {
+  margin: 2rem 0;
 }
 
-.indian-aqi div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
-.indian-aqi div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
-.us-aqi div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
-.us-aqi div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
-.pm2-5 div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
-.pm2-5 div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
-.pm10 div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
-.pm10 div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
-.co2 div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
-.co2 div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
-.co div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
-.co div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
-.oxygen div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
-.oxygen div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
-.ozone div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
-.ozone div#aqi-table-US tbody tr:nth-child(2) td:first-child p,
-.no2 div#aqi-table-IN tbody tr:nth-child(2) td:first-child p,
-.no2 div#aqi-table-US tbody tr:nth-child(2) td:first-child p {
-  color: #d4cc0f;
+div#calc-wrap div#calculations .pm-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.indian-aqi div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
-.indian-aqi div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
-.us-aqi div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
-.us-aqi div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
-.pm2-5 div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
-.pm2-5 div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
-.pm10 div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
-.pm10 div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
-.co2 div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
-.co2 div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
-.co div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
-.co div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
-.oxygen div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
-.oxygen div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
-.ozone div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
-.ozone div#aqi-table-US tbody tr:nth-child(3) td:first-child p,
-.no2 div#aqi-table-IN tbody tr:nth-child(3) td:first-child p,
-.no2 div#aqi-table-US tbody tr:nth-child(3) td:first-child p {
-  color: #e9572a;
+div#calc-wrap div#calculations .pm-wrapper .image-box {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
 }
 
-.indian-aqi div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
-.indian-aqi div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
-.us-aqi div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
-.us-aqi div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
-.pm2-5 div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
-.pm2-5 div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
-.pm10 div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
-.pm10 div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
-.co2 div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
-.co2 div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
-.co div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
-.co div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
-.oxygen div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
-.oxygen div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
-.ozone div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
-.ozone div#aqi-table-US tbody tr:nth-child(4) td:first-child p,
-.no2 div#aqi-table-IN tbody tr:nth-child(4) td:first-child p,
-.no2 div#aqi-table-US tbody tr:nth-child(4) td:first-child p {
-  color: #ec4d9f;
+div#calc-wrap div#calculations .pm-wrapper .content {
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
 }
 
-.indian-aqi div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
-.indian-aqi div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
-.us-aqi div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
-.us-aqi div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
-.pm2-5 div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
-.pm2-5 div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
-.pm10 div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
-.pm10 div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
-.co2 div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
-.co2 div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
-.co div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
-.co div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
-.oxygen div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
-.oxygen div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
-.ozone div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
-.ozone div#aqi-table-US tbody tr:nth-child(5) td:first-child p,
-.no2 div#aqi-table-IN tbody tr:nth-child(5) td:first-child p,
-.no2 div#aqi-table-US tbody tr:nth-child(5) td:first-child p {
-  color: #9858a2;
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress {
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.indian-aqi div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
-.indian-aqi div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
-.us-aqi div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
-.us-aqi div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
-.pm2-5 div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
-.pm2-5 div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
-.pm10 div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
-.pm10 div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
-.co2 div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
-.co2 div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
-.co div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
-.co div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
-.oxygen div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
-.oxygen div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
-.ozone div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
-.ozone div#aqi-table-US tbody tr:nth-child(6) td:first-child p,
-.no2 div#aqi-table-IN tbody tr:nth-child(6) td:first-child p,
-.no2 div#aqi-table-US tbody tr:nth-child(6) td:first-child p {
-  color: #c11e2f;
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li {
+  -webkit-box-flex: 10%;
+      -ms-flex: 10%;
+          flex: 10%;
 }
 
-.indian-aqi div#aqi-pm10-compare tbody tr,
-.us-aqi div#aqi-pm10-compare tbody tr {
-  margin: 2px 0 !important;
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:nth-child(1) p:first-child {
+  margin: 0;
+  border-bottom: 5px solid #34a12b;
 }
 
-.indian-aqi div#aqi-pm10-compare tbody tr:nth-child(1) td:nth-child(2),
-.us-aqi div#aqi-pm10-compare tbody tr:nth-child(1) td:nth-child(2) {
-  border-right: 5px solid #c11e2f;
-  border-left: 5px solid #c11e2f;
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:nth-child(2) p:first-child {
+  margin: 0;
+  border-bottom: 5px solid #d4cc0f;
 }
 
-.indian-aqi div#aqi-pm10-compare tbody tr:nth-child(2) td:nth-child(2),
-.us-aqi div#aqi-pm10-compare tbody tr:nth-child(2) td:nth-child(2) {
-  border-right: 5px solid #9858a2;
-  border-left: 5px solid #9858a2;
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:nth-child(3) p:first-child {
+  margin: 0;
+  border-bottom: 5px solid #e9572a;
 }
 
-.indian-aqi div#aqi-pm10-compare tbody tr:nth-child(3) td:nth-child(2),
-.us-aqi div#aqi-pm10-compare tbody tr:nth-child(3) td:nth-child(2) {
-  border-right: 5px solid #ec4d9f;
-  border-left: 5px solid #ec4d9f;
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:nth-child(4) p:first-child {
+  margin: 0;
+  border-bottom: 5px solid #ec4d9f;
 }
 
-.indian-aqi div#aqi-pm10-compare tbody tr:nth-child(4) td:nth-child(2),
-.us-aqi div#aqi-pm10-compare tbody tr:nth-child(4) td:nth-child(2) {
-  border-right: 5px solid #e9572a;
-  border-left: 5px solid #e9572a;
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:nth-child(5) p:first-child {
+  margin: 0;
+  border-bottom: 5px solid #9858a2;
 }
 
-.indian-aqi div#aqi-pm10-compare tbody tr:nth-child(5) td:nth-child(2),
-.us-aqi div#aqi-pm10-compare tbody tr:nth-child(5) td:nth-child(2) {
-  border-right: 5px solid #d4cc0f;
-  border-left: 5px solid #d4cc0f;
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:nth-child(6) p:first-child {
+  margin: 0;
+  border-bottom: 5px solid #c11e2f;
 }
 
-.indian-aqi div#aqi-pm10-compare tbody tr:nth-child(6) td:nth-child(2),
-.us-aqi div#aqi-pm10-compare tbody tr:nth-child(6) td:nth-child(2) {
-  border-right: 5px solid #34a12b;
-  border-left: 5px solid #34a12b;
-}
-
-.indian-aqi div#aqi-pm10-compare tbody tr td,
-.us-aqi div#aqi-pm10-compare tbody tr td {
-  border: none;
-}
-
-.tvoc div#aqi-table-IN tbody tr:nth-child(1) td:first-child {
-  color: #34a12b;
-}
-
-.tvoc div#aqi-table-IN tbody tr:nth-child(2) td:first-child {
-  color: #d4cc0f;
-}
-
-.tvoc div#aqi-table-IN tbody tr:nth-child(3) td:first-child {
-  color: #e9572a;
-}
-
-.tvoc div#aqi-table-IN tbody tr:nth-child(4) td:first-child {
-  color: #ec4d9f;
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:last-child p:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* ---------------------------------------------------
@@ -633,6 +493,9 @@ div#content div.line + div p {
   transition: 0.5s ease infinite;
 }
 
+/* ---------------------------------------------------
+    AQI PARAMETER CARDS
+----------------------------------------------------- */
 .AQI-categories {
   padding: 1rem 0;
   background-size: cover;
@@ -649,6 +512,10 @@ div#content div.line + div p {
 
 .AQI-categories a:hover {
   text-decoration: none;
+}
+
+.AQI-categories .col-md-4 {
+  margin-bottom: 1rem;
 }
 
 .AQI-categories .col-md-4:nth-child(1) .service-card {
@@ -744,5 +611,12 @@ div#content div.line + div p {
   color: #fff;
   line-height: 1;
   text-align: center;
+}
+
+/* ---------------------------------------------------
+    FOOTER SECTION
+----------------------------------------------------- */
+footer.bg-secondary {
+  background: #239fd3 !important;
 }
 /*# sourceMappingURL=style.css.map */
