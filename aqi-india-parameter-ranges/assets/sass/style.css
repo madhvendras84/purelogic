@@ -134,7 +134,7 @@ a:focus {
 }
 
 #sidebar {
-  min-width: 250px;
+  min-width: 230px;
   background: #f8f8f8;
   color: #6b6b6b;
   -webkit-transition: all 0.5s;
@@ -327,53 +327,6 @@ div#content div.line + div p {
 }
 
 /* ---------------------------------------------------
-    MEDIAQUERIES
------------------------------------------------------ */
-@media (max-width: 1200px) {
-  #sidebar {
-    min-width: 190px;
-  }
-}
-
-@media (max-width: 768px) {
-  #sidebar {
-    min-width: 200px;
-  }
-  #content {
-    padding: 25px;
-  }
-}
-
-@media (max-width: 767px) {
-  #sidebar {
-    margin-left: -250px;
-  }
-  #sidebar.active {
-    margin-left: 0;
-  }
-  .sidebar-main {
-    width: 0;
-  }
-  #sidebarCollapse span {
-    display: none;
-  }
-  .sidebar-header h3 {
-    position: relative;
-  }
-  .sidebar-header a#hideShow {
-    position: absolute;
-    top: 5px;
-    right: -5px;
-  }
-}
-
-@media (min-width: 768px) {
-  #hideShow {
-    display: none;
-  }
-}
-
-/* ---------------------------------------------------
     PM2.5 and PM10 calculation bar
 ----------------------------------------------------- */
 div#calc-wrap {
@@ -384,19 +337,27 @@ div#calc-wrap div#calculations .pm-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 div#calc-wrap div#calculations .pm-wrapper .image-box {
-  -ms-flex-preferred-size: 10%;
-      flex-basis: 10%;
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+}
+
+div#calc-wrap div#calculations .pm-wrapper .image-box img {
+  max-width: 100%;
 }
 
 div#calc-wrap div#calculations .pm-wrapper .content {
-  -ms-flex-preferred-size: 90%;
-      flex-basis: 90%;
+  -ms-flex-preferred-size: 85%;
+      flex-basis: 85%;
 }
 
 div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress {
@@ -481,8 +442,9 @@ div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:last-chi
 }
 
 .prana-container .image-wrapper img {
-  width: 80%;
+  width: 100%;
   border: 1px solid lightgray;
+  margin: 0 8px;
   padding: 5px;
   border-radius: 5px;
 }
@@ -599,7 +561,8 @@ div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:last-chi
 }
 
 .AQI-categories .service-card .card-block img {
-  max-width: 25%;
+  width: 20%;
+  min-width: 65px;
   margin: 0 10px;
 }
 
@@ -618,5 +581,129 @@ div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:last-chi
 ----------------------------------------------------- */
 footer.bg-secondary {
   background: #239fd3 !important;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (min-width: 992px) {
+  #hideShow {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  #sidebar {
+    min-width: 190px;
+  }
+  .prana-container p {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    margin: 1rem 0 !important;
+  }
+  .prana-container .image-wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .prana-container .image-wrapper img {
+    width: 100%;
+  }
+  .service-card .card-block img {
+    max-width: 60px;
+    height: auto;
+  }
+  #sidebar .sidebar-header a.navbar-brand {
+    margin-right: 0;
+  }
+  .sidebar-header h3 {
+    position: relative;
+  }
+  .sidebar-header a#hideShow {
+    position: absolute;
+    top: 6px;
+    right: -10px;
+  }
+  .pm-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .pm-wrapper .image-box {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .pm-wrapper ul#calc-progress {
+    min-width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+  .pm-wrapper ul#calc-progress li {
+    -webkit-box-flex: 15%;
+        -ms-flex: 15%;
+            flex: 15%;
+    min-width: 50px;
+  }
+  .pm-wrapper ul#calc-progress li p {
+    font-size: 10px;
+  }
+  .pm-wrapper #content,
+  .pm-wrapper .image-box {
+    -ms-flex-preferred-size: 100% !important;
+        flex-basis: 100% !important;
+    min-width: 100% !important;
+    margin: 1rem 0;
+    padding: 0 5px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    min-width: 200px;
+  }
+  #content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  .sidebar-main {
+    width: 0;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .col-md-4 {
+    min-width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 375px) {
+  div#calculations {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

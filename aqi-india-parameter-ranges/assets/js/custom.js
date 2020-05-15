@@ -18,8 +18,8 @@ $(document).ready(function () {
     });
 
     $('#hideShow').on('click', function (event) {
-        $('#sidebar').removeClass('active');
-        $('.sidebar-main').removeClass('activenow');
+        $('#sidebar').toggleClass('active');
+        $('.sidebar-main').toggleClass('activenow');
     });
 
 });

@@ -89,7 +89,7 @@ p strong {
   font-weight: 600;
 }
 
-ul#scroll > p {
+ul#scroll>p {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -133,12 +133,22 @@ a:focus {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
-$lila: $turbo-gray /*#7386D5*/;
-$lila-60: $turbo-gray-60 /*#6d7fcc*/;
-$lila-line: $turbo-gray-70 /*#47748b*/;
+$lila: $turbo-gray
+/*#7386D5*/
+;
+$lila-60: $turbo-gray-60
+/*#6d7fcc*/
+;
+$lila-line: $turbo-gray-70
+/*#47748b*/
+;
 
-$text-sidebar: #6b6b6b /*#fff*/;
-$text-sidebar-hover: #6b6b6b /*#fff*/;
+$text-sidebar: #6b6b6b
+/*#fff*/
+;
+$text-sidebar-hover: #6b6b6b
+/*#fff*/
+;
 
 .text-sidebar {
   color: $text-sidebar;
@@ -151,7 +161,7 @@ $text-sidebar-hover: #6b6b6b /*#fff*/;
 }
 
 #sidebar {
-  min-width: 250px;
+  min-width: 230px;
   background: $lila;
   color: $text-sidebar;
   transition: all 0.5s;
@@ -179,7 +189,9 @@ $text-sidebar-hover: #6b6b6b /*#fff*/;
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: $lila-60 /*#6d7fcc*/;
+  background: $lila-60
+    /*#6d7fcc*/
+  ;
 }
 
 #sidebar ul.components {
@@ -203,7 +215,7 @@ $text-sidebar-hover: #6b6b6b /*#fff*/;
   background: $text-sidebar-hover;
 }
 
-#sidebar ul li.active > a,
+#sidebar ul li.active>a,
 a[aria-expanded="true"] {
   color: $text-sidebar;
   background: $lila-60;
@@ -289,7 +301,7 @@ div#indian-aqi {
     CARD STYLING FOR THE CONTENT AREA
 ----------------------------------------------------- */
 
-div#content div.line + div {
+div#content div.line+div {
   background-color: #fff;
   margin-top: 0px;
   border-radius: 10px;
@@ -303,6 +315,7 @@ div#content div.line + div {
   h5 {
     margin: 20px 0px;
   }
+
   h5#sub-title {
     color: $primary;
   }
@@ -332,125 +345,77 @@ div#content div.line + div {
 }
 
 /* ---------------------------------------------------
-    MEDIAQUERIES
------------------------------------------------------ */
-
-@media (max-width: 1200px) {
-  #sidebar {
-    min-width: 190px;
-  }
-}
-
-@media (max-width: 768px) {
-  #sidebar {
-    min-width: 200px;
-  }
-
-  #content {
-    padding: 25px;
-  }
-}
-
-@media (max-width: 767px) {
-  #sidebar {
-    margin-left: -250px;
-  }
-
-  #sidebar.active {
-    margin-left: 0;
-  }
-
-  .sidebar-main {
-    width: 0;
-  }
-
-  #sidebarCollapse span {
-    display: none;
-  }
-
-  .sidebar-header h3 {
-    position: relative;
-  }
-
-  .sidebar-header a#hideShow {
-    position: absolute;
-    top: 5px;
-    right: -5px;
-  }
-}
-
-@media (min-width: 768px) {
-  #hideShow {
-    display: none;
-  }
-}
-
-/* ---------------------------------------------------
     PM2.5 and PM10 calculation bar
 ----------------------------------------------------- */
 div#calc-wrap {
   margin: 2rem 0;
 
-div#calculations {
-  .pm-wrapper {
-    display: flex;
-    align-items: center;
+  div#calculations {
+    .pm-wrapper {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
 
-    .image-box {
-      flex-basis: 10%;
-    }
+      .image-box {
+        flex-basis: 15%;
 
-    .content {
-      flex-basis: 90%;
+        img {
+          max-width: 100%;
+        }
+      }
 
-      ul#calc-progress {
-        margin: 0;
-        list-style: none;
-        display: flex;
+      .content {
+        flex-basis: 85%;
 
-        li {
-          flex: 10%;
+        ul#calc-progress {
+          margin: 0;
+          list-style: none;
+          display: flex;
 
-          &:nth-child(1) p:first-child {
-            margin: 0;
-            border-bottom: 5px solid $good;
-          }
+          li {
+            flex: 10%;
 
-          &:nth-child(2) p:first-child {
-            margin: 0;
-            border-bottom: 5px solid $moderate;
-          }
+            &:nth-child(1) p:first-child {
+              margin: 0;
+              border-bottom: 5px solid $good;
+            }
 
-          &:nth-child(3) p:first-child {
-            margin: 0;
-            border-bottom: 5px solid $poor;
-          }
+            &:nth-child(2) p:first-child {
+              margin: 0;
+              border-bottom: 5px solid $moderate;
+            }
 
-          &:nth-child(4) p:first-child {
-            margin: 0;
-            border-bottom: 5px solid $unhealthy;
-          }
+            &:nth-child(3) p:first-child {
+              margin: 0;
+              border-bottom: 5px solid $poor;
+            }
 
-          &:nth-child(5) p:first-child {
-            margin: 0;
-            border-bottom: 5px solid $severe;
-          }
+            &:nth-child(4) p:first-child {
+              margin: 0;
+              border-bottom: 5px solid $unhealthy;
+            }
 
-          &:nth-child(6) p:first-child {
-            margin: 0;
-            border-bottom: 5px solid $hazard;
-          }
+            &:nth-child(5) p:first-child {
+              margin: 0;
+              border-bottom: 5px solid $severe;
+            }
 
-          &:last-child p:last-child {
-            display: flex;
-            justify-content: space-between;
+            &:nth-child(6) p:first-child {
+              margin: 0;
+              border-bottom: 5px solid $hazard;
+            }
+
+            &:last-child p:last-child {
+              display: flex;
+              justify-content: space-between;
+            }
           }
         }
       }
     }
   }
 }
-}
+
 /* ---------------------------------------------------
     Layout change Codes
 ----------------------------------------------------- */
@@ -470,8 +435,9 @@ div#calculations {
   text-align: center;
 
   img {
-    width: 80%;
+    width: 100%;
     border: 1px solid lightgray;
+    margin: 0 8px;
     padding: 5px;
     border-radius: 5px;
 
@@ -507,36 +473,47 @@ div#calculations {
 
     &:nth-child(1) .service-card {
       @include background($good);
+
       &:hover {
         @include light-background($good);
       }
     }
+
     &:nth-child(2) .service-card {
       @include background($moderate);
+
       &:hover {
         @include light-background($moderate);
       }
     }
+
     &:nth-child(3) .service-card {
       @include background($poor);
+
       &:hover {
         @include light-background($poor);
       }
     }
+
     &:nth-child(4) .service-card {
       @include background($unhealthy);
+
       &:hover {
         @include light-background($unhealthy);
       }
     }
+
     &:nth-child(5) .service-card {
       @include background($severe);
+
       &:hover {
         @include light-background($severe);
       }
     }
+
     &:nth-child(6) .service-card {
       @include background($hazard);
+
       &:hover {
         @include light-background($hazard);
       }
@@ -552,7 +529,8 @@ div#calculations {
       height: 187px;
 
       img {
-        max-width: 25%;
+        width: 20%;
+        min-width: 65px;
         margin: 0 10px;
       }
 
@@ -572,8 +550,135 @@ div#calculations {
 /* ---------------------------------------------------
     FOOTER SECTION
 ----------------------------------------------------- */
-footer{
-  
-  &.bg-secondary { background: $primary !important;}
+footer {
+  &.bg-secondary {
+    background: $primary !important;
+  }
+}
 
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (min-width: 992px) {
+  #hideShow {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  #sidebar {
+    min-width: 190px;
+  }
+
+  .prana-container p {
+    order: 2;
+    width: 100%;
+    margin: 1rem 0 !important;
+  }
+
+  .prana-container .image-wrapper {
+    order: 1;
+    width: 100%;
+    margin: 1rem 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .service-card .card-block img {
+    max-width: 60px;
+    height: auto;
+  }
+
+  #sidebar .sidebar-header a.navbar-brand {
+    margin-right: 0;
+  }
+
+  .sidebar-header h3 {
+    position: relative;
+  }
+
+  .sidebar-header a#hideShow {
+    position: absolute;
+    top: 6px;
+    right: -10px;
+  }
+
+  .pm-wrapper {
+    justify-content: center;
+
+    .image-box {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    ul#calc-progress {
+      min-width: 100%;
+      flex-basis: 100%;
+      justify-content: center;
+      padding: 0;
+
+      li {
+        flex: 15%;
+        min-width: 50px;
+
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+
+    #content,
+    .image-box {
+      flex-basis: 100% !important;
+      min-width: 100% !important;
+      margin: 1rem 0;
+      padding: 0 5px;
+      flex: 0 0 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    min-width: 200px;
+  }
+
+  #content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+
+  #sidebar.active {
+    margin-left: 0;
+  }
+
+  .sidebar-main {
+    width: 0;
+  }
+
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .col-md-4 {
+    min-width: 50%;
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 375px) {
+  div#calculations {
+    display: none;
+  }
 }
