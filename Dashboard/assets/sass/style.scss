@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Nunito:400,600,700&display=swap');
+
+$bgcolor: #F1F2F6;
+$primary-color: #EF1F27;
+$secondry-color: #333;
+$light-black: #666;
+$text-white: #fff;
+$text-yellow: rgb(255, 255, 0);
+
+$roboto: "Roboto",
+sans-serif;
+$nunito-sans: 'Nunito Sans',
+sans-serif;
+$nunito: 'Nunito',
+sans-serif;
+
+@import url("https://fonts.googleapis.com/css?family=Kanit:400,600|Nunito:400,600,700,800,900&display=swap");
+
+$turbo-gray: #f8f8f8;
+$primary: #239fd3;
+$good: #34a12b;
+$moderate: #d4cc0f;
+$poor: #e9572a;
+$unhealthy: #ec4d9f;
+$severe: #9858a2;
+$hazard: #c11e2f;
+
+
+@mixin background($color) {
+  background: $color;
+  border: 0;
+}
+
+@mixin light-background($color) {
+  $temp: lighten($color, 10%);
+  background: $temp !important;
+  box-shadow: 2px 4px 8px 0px $temp;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: #fafafa;
+}
+
+p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.7em;
+  color: #666;
+}
+
+h5,
+p strong {
+  font-family: kanit;
+  font-weight: 600;
+}
+
+ul#scroll>p {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    BUTTONS AFTER HEADER
+----------------------------------------------------- */
+
+a#download, #dropdownMenuLink {
+    border-radius: 50px !important;
+    padding: 5px 20px;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+  width: 100%;
+  padding: 20px 0;
+  transition: all 0.5s;
+  position: relative;
+
+  .navbar-light .navbar-nav .nav-link,
+  .text-sidebar {
+    color: #fff !important;
+  }
+}
+
+/* ---------------------------------------------------
+    GLOBAL STYLING
+----------------------------------------------------- */
+section#global {
+  p strong {
+    font-weight: 700;
+    color: #444;
+  }
+}
+
+div#indian-aqi {
+  display: none;
+}
+
+/* ---------------------------------------------------
+    CARD STYLING FOR THE CONTENT AREA
+----------------------------------------------------- */
+
+div#content div.line+div {
+  margin-top: 0px;
+  text-align: left;
+  margin-bottom: 50px;
+  transition: all 0.3s ease;
+
+  h5 {
+    margin: 10px 0px;    
+    font-size: 1.5rem;
+  }
+
+  #sub-title {
+    color: $primary;
+  }
+
+  p {
+    margin: 0px 0px 15px 0px;
+    padding: 0px;
+  }
+}
+
+/* ---------------------------------------------------
+    PM2.5 and PM10 calculation bar
+----------------------------------------------------- */
+div#calc-wrap {
+  margin: 2rem 0;
+
+  div#calculations {
+    .pm-wrapper {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+
+      .image-box {
+        flex-basis: 15%;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .content {
+        flex-basis: 85%;
+
+        ul#calc-progress {
+          margin: 0;
+          list-style: none;
+          display: flex;
+
+          li {
+            flex: 10%;
+
+            &:nth-child(1) p:first-child {
+              margin: 0;
+              border-bottom: 5px solid $good;
+            }
+
+            &:nth-child(2) p:first-child {
+              margin: 0;
+              border-bottom: 5px solid $moderate;
+            }
+
+            &:nth-child(3) p:first-child {
+              margin: 0;
+              border-bottom: 5px solid $poor;
+            }
+
+            &:nth-child(4) p:first-child {
+              margin: 0;
+              border-bottom: 5px solid $unhealthy;
+            }
+
+            &:nth-child(5) p:first-child {
+              margin: 0;
+              border-bottom: 5px solid $severe;
+            }
+
+            &:nth-child(6) p:first-child {
+              margin: 0;
+              border-bottom: 5px solid $hazard;
+            }
+
+            &:last-child p:last-child {
+              display: flex;
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------------
+    Layout change Codes
+----------------------------------------------------- */
+#solid-hr {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #ddd;
+    margin: 45px 0;
+  }
+
+.prana-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prana-container #innerBox {
+  width: 60%;
+}
+
+.prana-container .image-wrapper {
+  width: 40%;
+  text-align: center;
+
+  img {
+    width: 100%;
+    border: 1px solid tansparent;
+    margin: 0 8px;
+    border-radius: 10px;
+
+    &:hover {
+      opacity: 0.9;
+      transition: 0.5s ease infinite;
+    }
+  }
+}
+
+/* ---------------------------------------------------
+    AQI PARAMETER CARDS
+----------------------------------------------------- */
+
+.AQI-categories {
+  padding: 1rem 0;
+  background-size: cover;
+
+  .card {
+    transition: all 0.3s;
+  }
+
+  .card-title {
+    padding-top: 0.5em;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .col-md-4 {
+    margin-bottom: 1rem;
+
+    &:nth-child(1) .service-card {
+      @include background($good);
+
+      &:hover {
+        @include light-background($good);
+      }
+    }
+
+    &:nth-child(2) .service-card {
+      @include background($moderate);
+
+      &:hover {
+        @include light-background($moderate);
+      }
+    }
+
+    &:nth-child(3) .service-card {
+      @include background($poor);
+
+      &:hover {
+        @include light-background($poor);
+      }
+    }
+
+    &:nth-child(4) .service-card {
+      @include background($unhealthy);
+
+      &:hover {
+        @include light-background($unhealthy);
+      }
+    }
+
+    &:nth-child(5) .service-card {
+      @include background($severe);
+
+      &:hover {
+        @include light-background($severe);
+      }
+    }
+
+    &:nth-child(6) .service-card {
+      @include background($hazard);
+
+      &:hover {
+        @include light-background($hazard);
+      }
+    }
+  }
+
+  .service-card {
+    .card-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+      height: 187px;
+
+      img {
+        width: 20%;
+        min-width: 65px;
+        margin: 0 10px;
+      }
+
+      h4.card-title {
+        margin: 0 10px;
+
+        p {
+          color: #fff;
+          line-height: 1;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------------
+    FOOTER SECTION
+----------------------------------------------------- */
+footer {
+  &.bg-secondary {
+    background: $primary !important;
+  }
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (min-width: 1200px){
+.container{
+    max-width: 992px !important;
+}
+.navbar {
+    padding: 0 !important;
+}
+}
+
+@media (min-width: 992px) {
+  #hideShow {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  #sidebar {
+    min-width: 190px;
+  }
+
+  .prana-container p {
+    order: 2;
+    width: 100%;
+    margin: 1rem 0 !important;
+  }
+
+  .prana-container .image-wrapper {
+    order: 1;
+    width: 100%;
+    margin: 1rem 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .service-card .card-block img {
+    max-width: 60px;
+    height: auto;
+  }
+
+  #sidebar .sidebar-header a.navbar-brand {
+    margin-right: 0;
+  }
+
+  .sidebar-header h3 {
+    position: relative;
+  }
+
+  .sidebar-header a#hideShow {
+    position: absolute;
+    top: 6px;
+    right: -10px;
+  }
+
+  .pm-wrapper {
+    justify-content: center;
+
+    .image-box {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    ul#calc-progress {
+      min-width: 100%;
+      flex-basis: 100%;
+      justify-content: center;
+      padding: 0;
+
+      li {
+        flex: 15%;
+        min-width: 50px;
+
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+
+    #content,
+    .image-box {
+      flex-basis: 100% !important;
+      min-width: 100% !important;
+      margin: 1rem 0;
+      padding: 0 5px;
+      flex: 0 0 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    min-width: 200px;
+  }
+
+  #content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+
+  #sidebar.active {
+    margin-left: 0;
+  }
+
+  .sidebar-main {
+    width: 0;
+  }
+
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .col-md-4 {
+    min-width: 50%;
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 375px) {
+  div#calculations {
+    display: none;
+  }
+}
+
+@mixin displayFlex($direction, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin textAlign($value) {
+    text-align: $value;
+}
+
+@mixin BackgroundImg($link, $size) {
+    background: {
+        image: $link;
+        size: $size;
+        position: center center;
+        repeat: no-repeat;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: $nunito;
+    background-color: $bgcolor;
+}
+
+header {
+    background-color: $text-white;
+
+    div#nav-wrapper {
+
+        @include displayFlex(row, nowrap);
+        justify-content: space-between;
+
+        .form-area {
+            flex-basis: 1;
+            width: 70%;
+
+            h1#logo {
+                margin-bottom: 0;
+            }
+        }
+
+        form {
+            display: inline-block;
+        }
+
+    }
+}
+
+footer {
+    background: #212121;
+    height: 60px;
+    @include displayFlex(row, nowrap);
+    align-items: center;
+    text-align: center;
+
+    p {
+        color: $text-white;
+        margin: 0;
+        font-size: 14px;
+    }
+}
+
+@media(min-width: 768px) {
+    .form-area {
+
+        form#mooc-search {
+            width: 50% !important;
+            position: relative;
+            margin-left: 30px;
+
+            &::after {
+                content: "\f140";
+                font-family: "fontAwesome";
+                position: absolute;
+                right: 12px;
+                top: 6px;
+                font-size: 1rem;
+                color: #036BFA;
+            }
+
+            &::before {
+                content: "\f002";
+                position: absolute;
+                left: 16px;
+                top: 6px;
+                font-family: "fontAwesome";
+                font-size: 1rem;
+                color: #b7b7b7;
+            }
+
+            input.form-control {
+                width: 100% !important;
+                border-radius: 25px;
+                padding: 0 35px;
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 992px) {
+
+    nav {
+        li.nav-item {
+
+            &.active {
+                background: #036BFA;
+                border-radius: 25px;
+                padding: 0px 16px;
+
+                & a {
+                    color: $text-white !important;
+                }
+            }
+
+            a {
+                font-weight: 600;
+                color: $secondry-color !important;
+            }
+        }
+
+    }
+}
+
+
+
+
+@media (max-width: 500px) {
+    form#mooc-search {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    h1.title {
+        font-size: 2rem;
+    }
+
+    p.description.text-center {
+        font-size: 1rem;
+    }
+
+
+}
+
+

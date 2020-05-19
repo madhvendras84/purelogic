@@ -1,0 +1,649 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans|Nunito:400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kanit:400,600|Nunito:400,600,700,800,900&display=swap");
+body {
+  font-family: "Nunito", sans-serif;
+  background: #fafafa;
+}
+
+p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.7em;
+  color: #666;
+}
+
+h5,
+p strong {
+  font-family: kanit;
+  font-weight: 600;
+}
+
+ul#scroll > p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    BUTTONS AFTER HEADER
+----------------------------------------------------- */
+a#download, #dropdownMenuLink {
+  border-radius: 50px !important;
+  padding: 5px 20px;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+  width: 100%;
+  padding: 20px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+}
+
+#content .navbar-light .navbar-nav .nav-link,
+#content .text-sidebar {
+  color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    GLOBAL STYLING
+----------------------------------------------------- */
+section#global p strong {
+  font-weight: 700;
+  color: #444;
+}
+
+div#indian-aqi {
+  display: none;
+}
+
+/* ---------------------------------------------------
+    CARD STYLING FOR THE CONTENT AREA
+----------------------------------------------------- */
+div#content div.line + div {
+  margin-top: 0px;
+  text-align: left;
+  margin-bottom: 50px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+div#content div.line + div h5 {
+  margin: 10px 0px;
+  font-size: 1.5rem;
+}
+
+div#content div.line + div #sub-title {
+  color: #239fd3;
+}
+
+div#content div.line + div p {
+  margin: 0px 0px 15px 0px;
+  padding: 0px;
+}
+
+/* ---------------------------------------------------
+    PM2.5 and PM10 calculation bar
+----------------------------------------------------- */
+div#calc-wrap {
+  margin: 2rem 0;
+}
+
+div#calc-wrap div#calculations .pm-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div#calc-wrap div#calculations .pm-wrapper .image-box {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+}
+
+div#calc-wrap div#calculations .pm-wrapper .image-box img {
+  max-width: 100%;
+}
+
+div#calc-wrap div#calculations .pm-wrapper .content {
+  -ms-flex-preferred-size: 85%;
+      flex-basis: 85%;
+}
+
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress {
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li {
+  -webkit-box-flex: 10%;
+      -ms-flex: 10%;
+          flex: 10%;
+}
+
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:nth-child(1) p:first-child {
+  margin: 0;
+  border-bottom: 5px solid #34a12b;
+}
+
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:nth-child(2) p:first-child {
+  margin: 0;
+  border-bottom: 5px solid #d4cc0f;
+}
+
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:nth-child(3) p:first-child {
+  margin: 0;
+  border-bottom: 5px solid #e9572a;
+}
+
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:nth-child(4) p:first-child {
+  margin: 0;
+  border-bottom: 5px solid #ec4d9f;
+}
+
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:nth-child(5) p:first-child {
+  margin: 0;
+  border-bottom: 5px solid #9858a2;
+}
+
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:nth-child(6) p:first-child {
+  margin: 0;
+  border-bottom: 5px solid #c11e2f;
+}
+
+div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:last-child p:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* ---------------------------------------------------
+    Layout change Codes
+----------------------------------------------------- */
+#solid-hr {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #ddd;
+  margin: 45px 0;
+}
+
+.prana-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.prana-container #innerBox {
+  width: 60%;
+}
+
+.prana-container .image-wrapper {
+  width: 40%;
+  text-align: center;
+}
+
+.prana-container .image-wrapper img {
+  width: 100%;
+  border: 1px solid tansparent;
+  margin: 0 8px;
+  border-radius: 10px;
+}
+
+.prana-container .image-wrapper img:hover {
+  opacity: 0.9;
+  -webkit-transition: 0.5s ease infinite;
+  transition: 0.5s ease infinite;
+}
+
+/* ---------------------------------------------------
+    AQI PARAMETER CARDS
+----------------------------------------------------- */
+.AQI-categories {
+  padding: 1rem 0;
+  background-size: cover;
+}
+
+.AQI-categories .card {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.AQI-categories .card-title {
+  padding-top: 0.5em;
+}
+
+.AQI-categories a:hover {
+  text-decoration: none;
+}
+
+.AQI-categories .col-md-4 {
+  margin-bottom: 1rem;
+}
+
+.AQI-categories .col-md-4:nth-child(1) .service-card {
+  background: #34a12b;
+  border: 0;
+}
+
+.AQI-categories .col-md-4:nth-child(1) .service-card:hover {
+  background: #41c936 !important;
+  -webkit-box-shadow: 2px 4px 8px 0px #41c936;
+          box-shadow: 2px 4px 8px 0px #41c936;
+}
+
+.AQI-categories .col-md-4:nth-child(2) .service-card {
+  background: #d4cc0f;
+  border: 0;
+}
+
+.AQI-categories .col-md-4:nth-child(2) .service-card:hover {
+  background: #f0e726 !important;
+  -webkit-box-shadow: 2px 4px 8px 0px #f0e726;
+          box-shadow: 2px 4px 8px 0px #f0e726;
+}
+
+.AQI-categories .col-md-4:nth-child(3) .service-card {
+  background: #e9572a;
+  border: 0;
+}
+
+.AQI-categories .col-md-4:nth-child(3) .service-card:hover {
+  background: #ee7b58 !important;
+  -webkit-box-shadow: 2px 4px 8px 0px #ee7b58;
+          box-shadow: 2px 4px 8px 0px #ee7b58;
+}
+
+.AQI-categories .col-md-4:nth-child(4) .service-card {
+  background: #ec4d9f;
+  border: 0;
+}
+
+.AQI-categories .col-md-4:nth-child(4) .service-card:hover {
+  background: #f17bb8 !important;
+  -webkit-box-shadow: 2px 4px 8px 0px #f17bb8;
+          box-shadow: 2px 4px 8px 0px #f17bb8;
+}
+
+.AQI-categories .col-md-4:nth-child(5) .service-card {
+  background: #9858a2;
+  border: 0;
+}
+
+.AQI-categories .col-md-4:nth-child(5) .service-card:hover {
+  background: #ad78b5 !important;
+  -webkit-box-shadow: 2px 4px 8px 0px #ad78b5;
+          box-shadow: 2px 4px 8px 0px #ad78b5;
+}
+
+.AQI-categories .col-md-4:nth-child(6) .service-card {
+  background: #c11e2f;
+  border: 0;
+}
+
+.AQI-categories .col-md-4:nth-child(6) .service-card:hover {
+  background: #df3345 !important;
+  -webkit-box-shadow: 2px 4px 8px 0px #df3345;
+          box-shadow: 2px 4px 8px 0px #df3345;
+}
+
+.AQI-categories .service-card .card-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+  height: 187px;
+}
+
+.AQI-categories .service-card .card-block img {
+  width: 20%;
+  min-width: 65px;
+  margin: 0 10px;
+}
+
+.AQI-categories .service-card .card-block h4.card-title {
+  margin: 0 10px;
+}
+
+.AQI-categories .service-card .card-block h4.card-title p {
+  color: #fff;
+  line-height: 1;
+  text-align: center;
+}
+
+/* ---------------------------------------------------
+    FOOTER SECTION
+----------------------------------------------------- */
+footer.bg-secondary {
+  background: #239fd3 !important;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 992px !important;
+  }
+  .navbar {
+    padding: 0 !important;
+  }
+}
+
+@media (min-width: 992px) {
+  #hideShow {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  #sidebar {
+    min-width: 190px;
+  }
+  .prana-container p {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    margin: 1rem 0 !important;
+  }
+  .prana-container .image-wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .prana-container .image-wrapper img {
+    width: 100%;
+  }
+  .service-card .card-block img {
+    max-width: 60px;
+    height: auto;
+  }
+  #sidebar .sidebar-header a.navbar-brand {
+    margin-right: 0;
+  }
+  .sidebar-header h3 {
+    position: relative;
+  }
+  .sidebar-header a#hideShow {
+    position: absolute;
+    top: 6px;
+    right: -10px;
+  }
+  .pm-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .pm-wrapper .image-box {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .pm-wrapper ul#calc-progress {
+    min-width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+  .pm-wrapper ul#calc-progress li {
+    -webkit-box-flex: 15%;
+        -ms-flex: 15%;
+            flex: 15%;
+    min-width: 50px;
+  }
+  .pm-wrapper ul#calc-progress li p {
+    font-size: 10px;
+  }
+  .pm-wrapper #content,
+  .pm-wrapper .image-box {
+    -ms-flex-preferred-size: 100% !important;
+        flex-basis: 100% !important;
+    min-width: 100% !important;
+    margin: 1rem 0;
+    padding: 0 5px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    min-width: 200px;
+  }
+  #content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  .sidebar-main {
+    width: 0;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .col-md-4 {
+    min-width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 375px) {
+  div#calculations {
+    display: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Nunito", sans-serif;
+  background-color: #F1F2F6;
+}
+
+header {
+  background-color: #fff;
+}
+
+header div#nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header div#nav-wrapper .form-area {
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
+  width: 70%;
+}
+
+header div#nav-wrapper .form-area h1#logo {
+  margin-bottom: 0;
+}
+
+header div#nav-wrapper form {
+  display: inline-block;
+}
+
+footer {
+  background: #212121;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+footer p {
+  color: #fff;
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .form-area form#mooc-search {
+    width: 50% !important;
+    position: relative;
+    margin-left: 30px;
+  }
+  .form-area form#mooc-search::after {
+    content: "\f140";
+    font-family: "fontAwesome";
+    position: absolute;
+    right: 12px;
+    top: 6px;
+    font-size: 1rem;
+    color: #036BFA;
+  }
+  .form-area form#mooc-search::before {
+    content: "\f002";
+    position: absolute;
+    left: 16px;
+    top: 6px;
+    font-family: "fontAwesome";
+    font-size: 1rem;
+    color: #b7b7b7;
+  }
+  .form-area form#mooc-search input.form-control {
+    width: 100% !important;
+    border-radius: 25px;
+    padding: 0 35px;
+  }
+  .form-area form#mooc-search input.form-control:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+@media (min-width: 992px) {
+  nav li.nav-item.active {
+    background: #036BFA;
+    border-radius: 25px;
+    padding: 0px 16px;
+  }
+  nav li.nav-item.active a {
+    color: #fff !important;
+  }
+  nav li.nav-item a {
+    font-weight: 600;
+    color: #333 !important;
+  }
+}
+
+@media (max-width: 500px) {
+  form#mooc-search {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  h1.title {
+    font-size: 2rem;
+  }
+  p.description.text-center {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
