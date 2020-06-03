@@ -128,8 +128,8 @@ div#content div.line+div {
   margin-bottom: 50px;
   transition: all 0.3s ease;
 
-  h5 {
-    margin: 10px 0px;    
+  #innerBox h5 {
+    margin: 10px 0px;     
     font-size: 1.5rem;
   }
 
@@ -174,34 +174,58 @@ div#calc-wrap {
           li {
             flex: 10%;
 
-            &:nth-child(1) p:first-child {
-              margin: 0;
+            &:nth-child(1) p {
+              color:$good;
+
+              &:first-child{
               border-bottom: 5px solid $good;
+              margin: 0;
+              }
             }
 
-            &:nth-child(2) p:first-child {
-              margin: 0;
+            &:nth-child(2) p {
+              color: $moderate;
+              &:first-child{
               border-bottom: 5px solid $moderate;
-            }
-
-            &:nth-child(3) p:first-child {
               margin: 0;
+            }
+          }
+
+            &:nth-child(3) p {
+              
+              color: $poor;
+              &:first-child{
               border-bottom: 5px solid $poor;
-            }
-
-            &:nth-child(4) p:first-child {
               margin: 0;
-              border-bottom: 5px solid $unhealthy;
+              }
             }
 
-            &:nth-child(5) p:first-child {
+            &:nth-child(4) p {             
+
+              color: $unhealthy;
+              &:first-child{
+              border-bottom: 5px solid $unhealthy;
+              margin: 0;
+              }
+            }
+
+            &:nth-child(5) p {             
+
+              color:$severe;
+
+              &:first-child{
               margin: 0;
               border-bottom: 5px solid $severe;
+              }
             }
 
-            &:nth-child(6) p:first-child {
-              margin: 0;
+            &:nth-child(6) p {
+              color: $hazard;
+
+              &:first-child{
+                margin: 0;
               border-bottom: 5px solid $hazard;
+              }
             }
 
             &:last-child p:last-child {
@@ -326,16 +350,19 @@ div#calc-wrap {
   }
 
   .service-card {
+
+    border-radius: 1rem;
+
     .card-block {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px 0;
-      height: 187px;
+      padding: 0;
+      height: 125px;
 
       img {
         width: 20%;
-        min-width: 65px;
+        min-width: 40px;
         margin: 0 10px;
       }
 
@@ -343,7 +370,8 @@ div#calc-wrap {
         margin: 0 10px;
 
         p {
-          color: #fff;
+          font-size: 12px;
+          margin: 5px 0 !important;
           line-height: 1;
           text-align: center;
         }
