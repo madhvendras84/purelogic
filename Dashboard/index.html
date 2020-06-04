@@ -596,115 +596,235 @@
                 <p>
                   <strong>How is the PM2.5 concentration related to your health?</strong>
                 </p>
-                <h5 id="sub-title">According to Indian AQI:</h5>
-                <section class="AQI-categories text-xs-center" id="indian-aqi">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <a href="javascript:void(0)">
-                          <div class="card service-card card-inverse">
-                            <div class="card-block">
-                              <img src="assets/images/good-aqi.png" alt="" />
-                              <h4 class="card-title">
-                                <p class="title">Good</p>
-                                <p class="value">(0-30)</p>
-                              </h4>
-                            </div>
-                          </div>
-                        </a>
-                        <p id="description" class="text-center mt-4">
-                          Minimal Health impact.
-                        </p>
-                      </div>
-                      <div class="col-md-4">
-                        <a href="javascript:void(0)">
-                          <div class="card service-card card-inverse">
-                            <div class="card-block">
-                              <img src="assets/images/moderate-aqi.png" alt="" />
-                              <h4 class="card-title">
-                                <p class="title">Satisfactory</p>
-                                <p class="value">
-                                  (31-60)
-                                </p>
-                              </h4>
-                            </div>
-                          </div>
-                        </a>
-                        <p id="description" class="text-center mt-4">
-                          Minor Breathing discomfort to sensitive people.
-                        </p>
-                      </div>
-                      <div class="col-md-4">
-                        <a href="javascript:void(0)">
-                          <div class="card service-card card-inverse">
-                            <div class="card-block">
-                              <img src="assets/images/poor-aqi.png" alt="" />
-                              <h4 class="card-title">
-                                <p class="title">Moderate</p>
-                                <p class="value">(61-90)</p>
-                              </h4>
-                            </div>
-                          </div>
-                        </a>
-                        <p id="description" class="text-center mt-4">
-                          Breathing discomfort to asthma patents, elderly and
-                          children.
-                        </p>
-                      </div>
-                      <div class="col-md-4">
-                        <a href="javascript:void(0)">
-                          <div class="card service-card card-inverse">
-                            <div class="card-block">
-                              <img src="assets/images/unhealthy-aqi.png" alt="" />
-                              <h4 class="card-title">
-                                <p class="title">Poor</p>
-                                <p class="value">(91-120)</p>
-                              </h4>
-                            </div>
-                          </div>
-                        </a>
-                        <p id="description" class="text-center mt-4">
-                          Breathing discomfort to all
-                        </p>
-                      </div>
-                      <div class="col-md-4">
-                        <a href="javascript:void(0)">
-                          <div class="card service-card card-inverse">
-                            <div class="card-block">
-                              <img src="assets/images/severe-aqi.png" alt="" />
-                              <h4 class="card-title">
-                                <p class="title">Very Poor</p>
-                                <p class="value">(121-250)</p>
-                              </h4>
-                            </div>
-                          </div>
-                        </a>
-                        <p id="description" class="text-center mt-4">
-                          Respiratory illness on prolonged exposure.
-                        </p>
-                      </div>
 
-                      <div class="col-md-4">
-                        <a href="javascript:void(0)">
-                          <div class="card service-card card-inverse">
-                            <div class="card-block">
-                              <img src="assets/images/hazardous-aqi.png" alt="" />
-                              <h4 class="card-title">
-                                <p class="title">Severe</p>
-                                <p class="value">(250+)</p>
-                              </h4>
+
+
+                <h5 id="sub-title">According to Indian AQI:</h5>
+                <div id="parent-tab-container" class="pm2-5-tabs">
+                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="pills-in-tab" data-toggle="pill" data-target="#pills-in" role="tab"
+                        aria-controls="pills-in" aria-selected="true">Indian AQI</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pills-us-tab" data-toggle="pill" data-target="#pills-us" role="tab"
+                        aria-controls="pills-us" aria-selected="false">US AQI</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <!-- indian tab container -->
+                    <div class="tab-pane fade show active" id="pills-in" role="tabpanel" aria-labelledby="pills-in-tab">
+                      <div class="indian-aqi-tabs">
+                        <ul class="nav nav-pills mb-3 aqi-category-info" id="pills-tab" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="pills-good-tab" data-toggle="pill" data-target="#pm2-5-in-good"
+                              role="tab" aria-controls="pills-good" aria-selected="true">0-50</a>
+                            <p id="tab-desc">Good</p>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-moderate-tab" data-toggle="pill"
+                              data-target="#pm2-5-in-moderate" role="tab" aria-controls="pills-moderate"
+                              aria-selected="false">50-100</a>
+                            <p id="tab-desc">Moderate</p>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-poor-tab" data-toggle="pill" data-target="#pm2-5-in-poor"
+                              role="tab" aria-controls="pills-poor" aria-selected="false">101-200</a>
+                            <p id="tab-desc">Poor</p>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-unhealthy-tab" data-toggle="pill"
+                              data-target="#pm2-5-in-unhealthy" role="tab" aria-controls="pills-unhealthy"
+                              aria-selected="false">201-300</a>
+                            <p id="tab-desc">Unhealthy</p>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-severe-tab" data-toggle="pill" data-target="#pm2-5-in-severe"
+                              role="tab" aria-controls="pills-severe" aria-selected="false">301-400</a>
+                            <p id="tab-desc">Severe</p>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-hazard-tab" data-toggle="pill" data-target="#pm2-5-in-hazard"
+                              role="tab" aria-controls="pills-hazard" aria-selected="false">401-500</a>
+                            <p id="tab-desc" class="text-center">Hazardous</p>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                          <div class="tab-pane fade show active" id="pm2-5-in-good" role="tabpanel"
+                            aria-labelledby="pills-good-tab">
+                            <div class="aqi-description">
+                              <h5 class="aqi-title good">Good</h5>
+                              <p>
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                <span> Minimal Health impact.</span>
+                              </p>
                             </div>
                           </div>
-                        </a>
-                        <p id="description" class="text-center mt-4">
-                          Health impact even on light physical work. Serious impact
-                          on people with heart/lung disease.
-                        </p>
+                          <div class="tab-pane fade" id="pm2-5-in-moderate" role="tabpanel"
+                            aria-labelledby="pills-moderate-tab">
+                            <div class="aqi-description">
+                              <h5 class="aqi-title moderate">Moderate</h5>
+                              <p>
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                <span> Minimal Health impact.</span>
+                              </p>
+                            </div>
+                          </div>
+              
+                          <div class="tab-pane fade" id="pm2-5-in-poor" role="tabpanel" aria-labelledby="pills-poor-tab">
+                            <div class="aqi-description">
+                              <h5 class="aqi-title poor">Poor</h5>
+                              <p>
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                <span> Minimal Health impact.</span>
+                              </p>
+                            </div>
+                          </div>
+              
+                          <div class="tab-pane fade" id="pm2-5-in-unhealthy" role="tabpanel"
+                            aria-labelledby="pills-unhealthy-tab">
+                            <div class="aqi-description">
+                              <h5 class="aqi-title unhealthy">Unhealthy</h5>
+                              <p>
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                <span> Minimal Health impact.</span>
+                              </p>
+                            </div>
+                          </div>
+              
+                          <div class="tab-pane fade" id="pm2-5-in-severe" role="tabpanel"
+                            aria-labelledby="pills-severe-tab">
+                            <div class="aqi-description">
+                              <h5 class="aqi-title severe">Severe</h5>
+                              <p>
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                <span> Minimal Health impact.</span>
+                              </p>
+                            </div>
+                          </div>
+              
+                          <div class="tab-pane fade" id="pm2-5-in-hazard" role="tabpanel"
+                            aria-labelledby="pills-hazard-tab">
+                            <div class="aqi-description">
+                              <h5 class="aqi-title hazard">hazard</h5>
+                              <p>
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                <span> Minimal Health impact.</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <!--End Row-->
+                    <!--  us tab container -->
+                    <div class="tab-pane fade" id="pills-us" role="tabpanel" aria-labelledby="pills-us-tab">
+                      <div class="us-aqi-tabs">
+                        <ul class="nav nav-pills mb-3 aqi-category-info" id="pills-tab" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="pills-good-tab" data-toggle="pill" data-target="#pm2-5-us-good"
+                              role="tab" aria-controls="pills-good" aria-selected="true">0-50</a>
+                            <p id="tab-desc">Good</p>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-moderate-tab" data-toggle="pill"
+                              data-target="#pm2-5-us-moderate" role="tab" aria-controls="pills-moderate"
+                              aria-selected="false">50-100</a>
+                            <p id="tab-desc">Moderate</p>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-poor-tab" data-toggle="pill" data-target="#pm2-5-us-poor"
+                              role="tab" aria-controls="pills-poor" aria-selected="false">101-200</a>
+                            <p id="tab-desc">Poor</p>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-unhealthy-tab" data-toggle="pill"
+                              data-target="#pm2-5-us-unhealthy" role="tab" aria-controls="pills-unhealthy"
+                              aria-selected="false">201-300</a>
+                            <p id="tab-desc">Unhealthy</p>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-severe-tab" data-toggle="pill" data-target="#pm2-5-us-severe"
+                              role="tab" aria-controls="pills-severe" aria-selected="false">301-400</a>
+                            <p id="tab-desc">Severe</p>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-hazard-tab" data-toggle="pill" data-target="#pm2-5-us-hazard"
+                              role="tab" aria-controls="pills-hazard" aria-selected="false">401-500</a>
+                            <p id="tab-desc" class="text-center">Hazardous</p>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                          <div class="tab-pane fade show active" id="pm2-5-us-good" role="tabpanel"
+                            aria-labelledby="pills-good-tab">
+                            <div class="aqi-description">
+                              <h5 class="aqi-title good">Good</h5>
+                              <p>
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                <span> Minimal Health impact.</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="pm2-5-us-moderate" role="tabpanel"
+                            aria-labelledby="pills-moderate-tab">
+                            <div class="aqi-description">
+                              <h5 class="aqi-title moderate">Moderate</h5>
+                              <p>
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                <span> Minimal Health impact.</span>
+                              </p>
+                            </div>
+                          </div>
+              
+                          <div class="tab-pane fade" id="pm2-5-us-poor" role="tabpanel" aria-labelledby="pills-poor-tab">
+                            <div class="aqi-description">
+                              <h5 class="aqi-title poor">Poor</h5>
+                              <p>
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                <span> Minimal Health impact.</span>
+                              </p>
+                            </div>
+                          </div>
+              
+                          <div class="tab-pane fade" id="pm2-5-us-unhealthy" role="tabpanel"
+                            aria-labelledby="pills-unhealthy-tab">
+                            <div class="aqi-description">
+                              <h5 class="aqi-title unhealthy">Unhealthy</h5>
+                              <p>
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                <span> Minimal Health impact.</span>
+                              </p>
+                            </div>
+                          </div>
+              
+                          <div class="tab-pane fade" id="pm2-5-us-severe" role="tabpanel"
+                            aria-labelledby="pills-severe-tab">
+                            <div class="aqi-description">
+                              <h5 class="aqi-title severe">Severe</h5>
+                              <p>
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                <span> Minimal Health impact.</span>
+                              </p>
+                            </div>
+                          </div>
+              
+                          <div class="tab-pane fade" id="pm2-5-us-hazard" role="tabpanel"
+                            aria-labelledby="pills-hazard-tab">
+                            <div class="aqi-description">
+                              <h5 class="aqi-title hazard">Hazard</h5>
+                              <p>
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                <span> Minimal Health impact.</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+              
+                      </div>
+                    </div>
+              
                   </div>
-                </section>
+              </div>
+
 
                 <div id="calc-wrap">
                   <div class="container" id="calculations">
@@ -751,123 +871,10 @@
                   </div>
                 </div>
 
-                <h5 id="sub-title">According to US AQI:</h5>
-                <section class="AQI-categories text-xs-center" id="indian-aqi">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <a href="javascript:void(0)">
-                          <div class="card service-card card-inverse">
-                            <div class="card-block">
-                              <img src="assets/images/good-aqi.png" alt="" />
-                              <h4 class="card-title">
-                                <p class="title">Good</p>
-                                <p class="value">(0-12)</p>
-                              </h4>
-                            </div>
-                          </div>
-                        </a>
-                        <p id="description" class="text-center mt-4">
-                          Air quality is considered satisfactory, and air pollution
-                          poses little or no risk.
-                        </p>
-                      </div>
-                      <div class="col-md-4">
-                        <a href="javascript:void(0)">
-                          <div class="card service-card card-inverse">
-                            <div class="card-block">
-                              <img src="assets/images/moderate-aqi.png" alt="" />
-                              <h4 class="card-title">
-                                <p class="title">Satisfactory</p>
-                                <p class="value">
-                                  (12.1-35.4)
-                                </p>
-                              </h4>
-                            </div>
-                          </div>
-                        </a>
-                        <p id="description" class="text-center mt-4">
-                          Air quality is acceptable; however, for some pollutants
-                          there may be a moderate health concern for a very small
-                          number of people who are unusually sensitive to air
-                          pollution.
-                        </p>
-                      </div>
-                      <div class="col-md-4">
-                        <a href="javascript:void(0)">
-                          <div class="card service-card card-inverse">
-                            <div class="card-block">
-                              <img src="assets/images/poor-aqi.png" alt="" />
-                              <h4 class="card-title">
-                                <p class="title">Moderate</p>
-                                <p class="value">(35.5-55.4)</p>
-                              </h4>
-                            </div>
-                          </div>
-                        </a>
-                        <p id="description" class="text-center mt-4">
-                          Members of sensitive groups may experience health effects.
-                          The general public is not likely to be affected.
-                        </p>
-                      </div>
-                      <div class="col-md-4">
-                        <a href="javascript:void(0)">
-                          <div class="card service-card card-inverse">
-                            <div class="card-block">
-                              <img src="assets/images/unhealthy-aqi.png" alt="" />
-                              <h4 class="card-title">
-                                <p class="title">Poor</p>
-                                <p class="value">(55.5-150.4)</p>
-                              </h4>
-                            </div>
-                          </div>
-                        </a>
-                        <p id="description" class="text-center mt-4">
-                          Everyone may begin to experience health effects; members
-                          of sensitive groups may experience more serious health
-                          effects.
-                        </p>
-                      </div>
-                      <div class="col-md-4">
-                        <a href="javascript:void(0)">
-                          <div class="card service-card card-inverse">
-                            <div class="card-block">
-                              <img src="assets/images/severe-aqi.png" alt="" />
-                              <h4 class="card-title">
-                                <p class="title">Very Poor</p>
-                                <p class="value">(150.5-250.4)</p>
-                              </h4>
-                            </div>
-                          </div>
-                        </a>
-                        <p id="description" class="text-center mt-4">
-                          Health alert: everyone may experience more serious health
-                          effects.
-                        </p>
-                      </div>
-
-                      <div class="col-md-4">
-                        <a href="javascript:void(0)">
-                          <div class="card service-card card-inverse">
-                            <div class="card-block">
-                              <img src="assets/images/hazardous-aqi.png" alt="" />
-                              <h4 class="card-title">
-                                <p class="title">Severe</p>
-                                <p class="value">(250.5+)</p>
-                              </h4>
-                            </div>
-                          </div>
-                        </a>
-                        <p id="description" class="text-center mt-4">
-                          Health warnings of emergency conditions. The entire
-                          population is more likely to be affected.
-                        </p>
-                      </div>
-                    </div>
-                    <!--End Row-->
-                  </div>
-                </section>
+                
               </div>
+
+
               <!-- PM10 -->
               <div class="line" id="pm10"></div>
               <div class="pm10">
@@ -898,6 +905,8 @@
                   <strong>How is the PM10 concentration related to your health?</strong>
                 </p>
                 <h5 id="sub-title">According to Indian AQI:</h5>
+
+                
                 <section class="AQI-categories text-xs-center" id="indian-aqi">
                   <div class="container">
                     <div class="row">
