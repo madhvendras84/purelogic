@@ -292,7 +292,7 @@ div#content div.line + div h5 {
   margin: 20px 0px;
 }
 
-div#content div.line + div h5#sub-title {
+div#content div.line + div #sub-title {
   color: #239fd3;
 }
 
