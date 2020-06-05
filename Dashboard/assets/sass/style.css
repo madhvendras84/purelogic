@@ -25,6 +25,30 @@
   background: #c11e2f;
 }
 
+.t-good {
+  color: #34a12b;
+}
+
+.t-moderate {
+  color: #d4cc0f;
+}
+
+.t-poor {
+  color: #e9572a;
+}
+
+.t-unhealthy {
+  color: #ec4d9f;
+}
+
+.t-severe {
+  color: #9858a2;
+}
+
+.t-hazard {
+  color: #c11e2f;
+}
+
 body {
   font-family: "Nunito", sans-serif;
   background: #fafafa;
@@ -297,6 +321,46 @@ div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:last-chi
   transition: 0.5s ease infinite;
 }
 
+div#parent-tab-container ul#aqi-tabs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+div#parent-tab-container ul#aqi-tabs-container li.nav-item {
+  color: #fff;
+  width: 130px;
+}
+
+div#parent-tab-container ul#aqi-tabs-container li.nav-item:first-child {
+  border-radius: 10px 0 0 10px;
+  border-top: 1px solid #cdd5df;
+  border-left: 1px solid #cdd5df;
+  border-bottom: 1px solid #cdd5df;
+}
+
+div#parent-tab-container ul#aqi-tabs-container li.nav-item:last-child {
+  border-radius: 0 10px 10px 0;
+  border-top: 1px solid #cdd5df;
+  border-right: 1px solid #cdd5df;
+  border-bottom: 1px solid #cdd5df;
+}
+
+div#parent-tab-container ul#aqi-tabs-container li.nav-item a {
+  text-align: center;
+  color: #212121;
+}
+
+div#parent-tab-container ul#aqi-tabs-container li.nav-item a.active {
+  background: #212121;
+  color: #fff;
+  border-radius: 10px !important;
+}
+
 .indian-aqi-tabs ul#pills-tab li.nav-item,
 .us-aqi-tabs ul#pills-tab li.nav-item {
   -webkit-box-flex: 0;
@@ -409,7 +473,6 @@ div#pills-tabContent .aqi-description p {
 
 div#pills-tabContent .aqi-description p i {
   font-size: 24px !important;
-  color: orangered;
   margin-right: 10px;
 }
 

@@ -23,28 +23,52 @@ $unhealthy: #ec4d9f;
 $severe: #9858a2;
 $hazard: #c11e2f;
 
-.good{
+.good {
   background: $good;
 }
 
-.moderate{
+.moderate {
   background: $moderate;
 }
 
-.poor{
+.poor {
   background: $poor;
 }
 
-.unhealthy{
+.unhealthy {
   background: $unhealthy;
 }
 
-.severe{
+.severe {
   background: $severe;
 }
 
-.hazard{
+.hazard {
   background: $hazard;
+}
+
+.t-good {
+  color: $good;
+}
+
+.t-moderate {
+  color: $moderate;
+}
+
+.t-poor {
+  color: $poor;
+}
+
+.t-unhealthy {
+  color: $unhealthy;
+}
+
+.t-severe {
+  color: $severe;
+}
+
+.t-hazard {
+  color: $hazard;
 }
 
 @mixin background($color) {
@@ -296,85 +320,128 @@ div#calc-wrap {
 }
 
 // new codes
-.indian-aqi-tabs,
-.us-aqi-tabs {
-ul#pills-tab li.nav-item {
-  flex: 0 0 auto;
-  min-width: 16.66%;
 
-  &:nth-child(1) {
-    a.nav-link {
-      background: $good;
-    }
-    p#tab-desc {
-      color: $good;
-    }
-  }
+div#parent-tab-container {
+  ul#aqi-tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 
-  &:nth-child(2) {
-    a.nav-link {
-      background: $moderate;
-    }
-    p#tab-desc {
-      color: $moderate;
-    }
-  }
+    li.nav-item {
+      color: #fff;
+      width: 130px;
 
-  &:nth-child(3) {
-    a.nav-link {
-      background: $poor;
-    }
-    p#tab-desc {
-      color: $poor;
-    }
-  }
+      &:first-child {
+        border-radius: 10px 0 0 10px;
+        border: {
+          top: 1px solid #cdd5df;
+          left: 1px solid #cdd5df;
+          bottom: 1px solid #cdd5df;
+        }
+      }
 
-  &:nth-child(4) {
-    a.nav-link {
-      background: $unhealthy;
-    }
-    p#tab-desc {
-      color: $unhealthy;
-    }
-  }
+      &:last-child {
+        border-radius: 0 10px 10px 0;
+        border: {
+          top: 1px solid #cdd5df;
+          right: 1px solid #cdd5df;
+          bottom: 1px solid #cdd5df;
+        }
+      }
 
-  &:nth-child(5) {
-    a.nav-link {
-      background: $severe;
-    }
-    p#tab-desc {
-      color: $severe;
-    }
-  }
+      a {
+        text-align: center;
+        color: #212121;
 
-  &:nth-child(6) {
-    a.nav-link {
-      background: $hazard;
-    }
-    p#tab-desc {
-      color: $hazard;
-    }
-  }
-
-  a.nav-link {
-    color: $text-white;
-    text-align: center;
-    font-size: 14px;
-    margin: 5px;
-    padding: 5px;
-
-    & + p#tab-desc {
-      text-align: center;
-      font-weight: 700;
-      letter-spacing: 0.6px;
-    }
-
-    &.active {
-      outline: 2px solid #fff;
-      outline-offset: -5px;
+        &.active {
+          background: #212121;
+          color: #fff;
+          border-radius: 10px !important;
+        }
+      }
     }
   }
 }
+
+.indian-aqi-tabs,
+.us-aqi-tabs {
+  ul#pills-tab li.nav-item {
+    flex: 0 0 auto;
+    min-width: 16.66%;
+
+    &:nth-child(1) {
+      a.nav-link {
+        background: $good;
+      }
+      p#tab-desc {
+        color: $good;
+      }
+    }
+
+    &:nth-child(2) {
+      a.nav-link {
+        background: $moderate;
+      }
+      p#tab-desc {
+        color: $moderate;
+      }
+    }
+
+    &:nth-child(3) {
+      a.nav-link {
+        background: $poor;
+      }
+      p#tab-desc {
+        color: $poor;
+      }
+    }
+
+    &:nth-child(4) {
+      a.nav-link {
+        background: $unhealthy;
+      }
+      p#tab-desc {
+        color: $unhealthy;
+      }
+    }
+
+    &:nth-child(5) {
+      a.nav-link {
+        background: $severe;
+      }
+      p#tab-desc {
+        color: $severe;
+      }
+    }
+
+    &:nth-child(6) {
+      a.nav-link {
+        background: $hazard;
+      }
+      p#tab-desc {
+        color: $hazard;
+      }
+    }
+
+    a.nav-link {
+      color: $text-white;
+      text-align: center;
+      font-size: 14px;
+      margin: 5px;
+      padding: 5px;
+
+      & + p#tab-desc {
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+      }
+
+      &.active {
+        outline: 2px solid #fff;
+        outline-offset: -5px;
+      }
+    }
+  }
 }
 
 div#pills-tabContent .aqi-description {
@@ -394,7 +461,6 @@ div#pills-tabContent .aqi-description {
     margin-top: 1rem !important;
     i {
       font-size: 24px !important;
-      color: orangered;
       margin-right: 10px;
     }
   }
