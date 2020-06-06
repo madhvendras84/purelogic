@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans|Nunito:400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kanit:400,600|Nunito:400,600,700,800,900&display=swap");
 
 $bgcolor: #f1f2f6;
 $primary-color: #ef1f27;
@@ -7,13 +8,6 @@ $secondry-color: #333;
 $light-black: #666;
 $text-white: #fff;
 $text-yellow: rgb(255, 255, 0);
-
-$roboto: "Roboto", sans-serif;
-$nunito-sans: "Nunito Sans", sans-serif;
-$nunito: "Nunito", sans-serif;
-
-@import url("https://fonts.googleapis.com/css?family=Kanit:400,600|Nunito:400,600,700,800,900&display=swap");
-
 $turbo-gray: #f8f8f8;
 $primary: #239fd3;
 $good: #34a12b;
@@ -22,6 +16,10 @@ $poor: #e9572a;
 $unhealthy: #ec4d9f;
 $severe: #9858a2;
 $hazard: #c11e2f;
+
+$roboto: "Roboto", sans-serif;
+$nunito-sans: "Nunito Sans", sans-serif;
+$nunito: "Nunito", sans-serif;
 
 .good {
   background: $good;
@@ -71,20 +69,19 @@ $hazard: #c11e2f;
   color: $hazard;
 }
 
-@mixin background($color) {
-  background: $color;
+* {
+  margin: 0;
+  padding: 0;
   border: 0;
-}
-
-@mixin light-background($color) {
-  $temp: lighten($color, 10%);
-  background: $temp !important;
-  box-shadow: 2px 4px 8px 0px $temp;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Nunito", sans-serif;
-  background: #fafafa;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: $nunito;
+  background-color: $bgcolor;
 }
 
 p {
@@ -296,30 +293,32 @@ div#calc-wrap {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-}
 
-.prana-container #innerBox {
-  width: 60%;
-}
+  #innerBox {
+    width: 60%;
+  }
 
-.prana-container .image-wrapper {
-  width: 40%;
-  text-align: center;
+  .image-wrapper {
+    width: 40%;
+    text-align: center;
 
-  img {
-    width: 100%;
-    border: 1px solid tansparent;
-    margin: 0 8px;
-    border-radius: 10px;
+    img {
+      width: 100%;
+      border: 1px solid tansparent;
+      margin: 0 8px;
+      border-radius: 10px;
 
-    &:hover {
-      opacity: 0.9;
-      transition: 0.5s ease infinite;
+      &:hover {
+        opacity: 0.9;
+        transition: 0.5s ease infinite;
+      }
     }
   }
 }
 
-// new codes
+/* ---------------------------------------------------
+    TAB LAYOUT FOR PILLS
+----------------------------------------------------- */
 
 div#parent-tab-container {
   ul#aqi-tabs-container {
@@ -364,7 +363,10 @@ div#parent-tab-container {
 }
 
 .indian-aqi-tabs,
+.US-aqi-tabs,
 .us-aqi-tabs {
+  margin: 2rem 0;
+
   ul#pills-tab li.nav-item {
     flex: 0 0 auto;
     min-width: 16.66%;
@@ -469,102 +471,89 @@ div#pills-tabContent .aqi-description {
 /* ---------------------------------------------------
     AQI PARAMETER CARDS
 ----------------------------------------------------- */
-
-.AQI-categories {
-  padding: 1rem 0;
-  background-size: cover;
-
-  .card {
-    transition: all 0.3s;
-  }
-
-  .card-title {
-    padding-top: 0.5em;
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-
-  .col-md-4 {
-    margin-bottom: 1rem;
-
-    &:nth-child(1) .service-card {
-      @include background($good);
-
-      &:hover {
-        @include light-background($good);
+#aqi-cards {
+  .col-md-2,
+  .col-md-3 {
+    &:nth-child(1) {
+      &:hover .cards-wrapper {
+        border: 1px dashed $good;
       }
     }
-
-    &:nth-child(2) .service-card {
-      @include background($moderate);
-
-      &:hover {
-        @include light-background($moderate);
+    &:nth-child(2) {
+      &:hover .cards-wrapper {
+        border: 1px dashed $moderate;
       }
     }
-
-    &:nth-child(3) .service-card {
-      @include background($poor);
-
-      &:hover {
-        @include light-background($poor);
+    &:nth-child(3) {
+      &:hover .cards-wrapper {
+        border: 1px dashed $poor;
       }
     }
-
-    &:nth-child(4) .service-card {
-      @include background($unhealthy);
-
-      &:hover {
-        @include light-background($unhealthy);
+    &:nth-child(4) {
+      &:hover .cards-wrapper {
+        border: 1px dashed $unhealthy;
       }
     }
-
-    &:nth-child(5) .service-card {
-      @include background($severe);
-
-      &:hover {
-        @include light-background($severe);
+    &:nth-child(5) {
+      &:hover .cards-wrapper {
+        border: 1px dashed $severe;
       }
     }
-
-    &:nth-child(6) .service-card {
-      @include background($hazard);
-
-      &:hover {
-        @include light-background($hazard);
+    &:nth-child(6) {
+      &:hover .cards-wrapper {
+        border: 1px dashed $hazard;
       }
     }
   }
+}
 
-  .service-card {
-    border-radius: 1rem;
+#aqi-cards .col-md-2:last-child div#card-image img {
+  width: 45px;
+  margin-top: 20px;
+}
 
-    .card-block {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-      height: 125px;
+.cards-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  background: $text-white;
+  border: 1px dashed transparent;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 10px;
 
-      img {
-        width: 20%;
-        min-width: 40px;
-        margin: 0 10px;
-      }
+  &:hover img {
+    animation: avada 2s ease infinite;
+  }
 
-      h4.card-title {
-        margin: 0 10px;
+  div#card-image {
+    height: 90px;
+  }
 
-        p {
-          font-size: 12px;
-          margin: 5px 0 !important;
-          line-height: 1;
-          text-align: center;
-        }
-      }
+  div#card-info {
+    align-self: flex-end;
+
+    h6#card-title {
+      text-align: center;
+      padding: 2px 8px;
+      color: $text-white;
+      border-radius: 15px;
+      font-size: 12px;
     }
+
+    p.card-desc {
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  div#card-image img {
+    max-width: 80px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -590,17 +579,7 @@ footer {
   }
 }
 
-@media (min-width: 992px) {
-  #hideShow {
-    display: none;
-  }
-}
-
 @media (max-width: 992px) {
-  #sidebar {
-    min-width: 190px;
-  }
-
   .prana-container p {
     order: 2;
     width: 100%;
@@ -617,23 +596,9 @@ footer {
     }
   }
 
-  .service-card .card-block img {
+  .cards-wrapper.card-block img {
     max-width: 60px;
     height: auto;
-  }
-
-  #sidebar .sidebar-header a.navbar-brand {
-    margin-right: 0;
-  }
-
-  .sidebar-header h3 {
-    position: relative;
-  }
-
-  .sidebar-header a#hideShow {
-    position: absolute;
-    top: 6px;
-    right: -10px;
   }
 
   .pm-wrapper {
@@ -672,37 +637,8 @@ footer {
 }
 
 @media (max-width: 768px) {
-  #sidebar {
-    min-width: 200px;
-  }
-
   #content {
     padding: 25px;
-  }
-}
-
-@media (max-width: 767px) {
-  #sidebar {
-    margin-left: -250px;
-  }
-
-  #sidebar.active {
-    margin-left: 0;
-  }
-
-  .sidebar-main {
-    width: 0;
-  }
-
-  #sidebarCollapse span {
-    display: none;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
-  .col-md-4 {
-    min-width: 50%;
-    flex: 0 0 50%;
   }
 }
 
@@ -729,21 +665,6 @@ footer {
     position: center center;
     repeat: no-repeat;
   }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: $nunito;
-  background-color: $bgcolor;
 }
 
 header {
@@ -850,11 +771,50 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .prana-container div#innerBox,
+  .image-wrapper {
+    flex-basis: 100%;
+    min-width: 100%;
+  }
+  ul#pills-tab li.nav-item {
+    min-width: 33% !important;
+    flex-basis: 33%;
+  }
+
+  p#tab-desc {
+    font-size: 14px;
+  }
+  div#aqi-cards .col-md-2 {
+    min-width: 50%;
+  }
+
   h1.title {
     font-size: 2rem;
   }
 
   p.description.text-center {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  ul#pills-tab li.nav-item {
+    min-width: 50% !important;
+    flex-basis: 25%;
+  }
+  p#tab-desc {
+    font-size: 10px;
+  }
+}
+
+@keyframes avada {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

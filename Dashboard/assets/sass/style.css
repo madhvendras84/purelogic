@@ -49,9 +49,20 @@
   color: #c11e2f;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   font-family: "Nunito", sans-serif;
-  background: #fafafa;
+  background-color: #f1f2f6;
 }
 
 p {
@@ -321,6 +332,9 @@ div#calc-wrap div#calculations .pm-wrapper .content ul#calc-progress li:last-chi
   transition: 0.5s ease infinite;
 }
 
+/* ---------------------------------------------------
+    TAB LAYOUT FOR PILLS
+----------------------------------------------------- */
 div#parent-tab-container ul#aqi-tabs-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -361,7 +375,14 @@ div#parent-tab-container ul#aqi-tabs-container li.nav-item a.active {
   border-radius: 10px !important;
 }
 
+.indian-aqi-tabs,
+.US-aqi-tabs,
+.us-aqi-tabs {
+  margin: 2rem 0;
+}
+
 .indian-aqi-tabs ul#pills-tab li.nav-item,
+.US-aqi-tabs ul#pills-tab li.nav-item,
 .us-aqi-tabs ul#pills-tab li.nav-item {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
@@ -370,66 +391,79 @@ div#parent-tab-container ul#aqi-tabs-container li.nav-item a.active {
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item:nth-child(1) a.nav-link,
+.US-aqi-tabs ul#pills-tab li.nav-item:nth-child(1) a.nav-link,
 .us-aqi-tabs ul#pills-tab li.nav-item:nth-child(1) a.nav-link {
   background: #34a12b;
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item:nth-child(1) p#tab-desc,
+.US-aqi-tabs ul#pills-tab li.nav-item:nth-child(1) p#tab-desc,
 .us-aqi-tabs ul#pills-tab li.nav-item:nth-child(1) p#tab-desc {
   color: #34a12b;
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item:nth-child(2) a.nav-link,
+.US-aqi-tabs ul#pills-tab li.nav-item:nth-child(2) a.nav-link,
 .us-aqi-tabs ul#pills-tab li.nav-item:nth-child(2) a.nav-link {
   background: #d4cc0f;
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item:nth-child(2) p#tab-desc,
+.US-aqi-tabs ul#pills-tab li.nav-item:nth-child(2) p#tab-desc,
 .us-aqi-tabs ul#pills-tab li.nav-item:nth-child(2) p#tab-desc {
   color: #d4cc0f;
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item:nth-child(3) a.nav-link,
+.US-aqi-tabs ul#pills-tab li.nav-item:nth-child(3) a.nav-link,
 .us-aqi-tabs ul#pills-tab li.nav-item:nth-child(3) a.nav-link {
   background: #e9572a;
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item:nth-child(3) p#tab-desc,
+.US-aqi-tabs ul#pills-tab li.nav-item:nth-child(3) p#tab-desc,
 .us-aqi-tabs ul#pills-tab li.nav-item:nth-child(3) p#tab-desc {
   color: #e9572a;
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item:nth-child(4) a.nav-link,
+.US-aqi-tabs ul#pills-tab li.nav-item:nth-child(4) a.nav-link,
 .us-aqi-tabs ul#pills-tab li.nav-item:nth-child(4) a.nav-link {
   background: #ec4d9f;
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item:nth-child(4) p#tab-desc,
+.US-aqi-tabs ul#pills-tab li.nav-item:nth-child(4) p#tab-desc,
 .us-aqi-tabs ul#pills-tab li.nav-item:nth-child(4) p#tab-desc {
   color: #ec4d9f;
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item:nth-child(5) a.nav-link,
+.US-aqi-tabs ul#pills-tab li.nav-item:nth-child(5) a.nav-link,
 .us-aqi-tabs ul#pills-tab li.nav-item:nth-child(5) a.nav-link {
   background: #9858a2;
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item:nth-child(5) p#tab-desc,
+.US-aqi-tabs ul#pills-tab li.nav-item:nth-child(5) p#tab-desc,
 .us-aqi-tabs ul#pills-tab li.nav-item:nth-child(5) p#tab-desc {
   color: #9858a2;
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item:nth-child(6) a.nav-link,
+.US-aqi-tabs ul#pills-tab li.nav-item:nth-child(6) a.nav-link,
 .us-aqi-tabs ul#pills-tab li.nav-item:nth-child(6) a.nav-link {
   background: #c11e2f;
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item:nth-child(6) p#tab-desc,
+.US-aqi-tabs ul#pills-tab li.nav-item:nth-child(6) p#tab-desc,
 .us-aqi-tabs ul#pills-tab li.nav-item:nth-child(6) p#tab-desc {
   color: #c11e2f;
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item a.nav-link,
+.US-aqi-tabs ul#pills-tab li.nav-item a.nav-link,
 .us-aqi-tabs ul#pills-tab li.nav-item a.nav-link {
   color: #fff;
   text-align: center;
@@ -439,6 +473,7 @@ div#parent-tab-container ul#aqi-tabs-container li.nav-item a.active {
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item a.nav-link + p#tab-desc,
+.US-aqi-tabs ul#pills-tab li.nav-item a.nav-link + p#tab-desc,
 .us-aqi-tabs ul#pills-tab li.nav-item a.nav-link + p#tab-desc {
   text-align: center;
   font-weight: 700;
@@ -446,6 +481,7 @@ div#parent-tab-container ul#aqi-tabs-container li.nav-item a.active {
 }
 
 .indian-aqi-tabs ul#pills-tab li.nav-item a.nav-link.active,
+.US-aqi-tabs ul#pills-tab li.nav-item a.nav-link.active,
 .us-aqi-tabs ul#pills-tab li.nav-item a.nav-link.active {
   outline: 2px solid #fff;
   outline-offset: -5px;
@@ -479,127 +515,92 @@ div#pills-tabContent .aqi-description p i {
 /* ---------------------------------------------------
     AQI PARAMETER CARDS
 ----------------------------------------------------- */
-.AQI-categories {
-  padding: 1rem 0;
-  background-size: cover;
+#aqi-cards .col-md-2:nth-child(1):hover .cards-wrapper,
+#aqi-cards .col-md-3:nth-child(1):hover .cards-wrapper {
+  border: 1px dashed #34a12b;
 }
 
-.AQI-categories .card {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+#aqi-cards .col-md-2:nth-child(2):hover .cards-wrapper,
+#aqi-cards .col-md-3:nth-child(2):hover .cards-wrapper {
+  border: 1px dashed #d4cc0f;
 }
 
-.AQI-categories .card-title {
-  padding-top: 0.5em;
+#aqi-cards .col-md-2:nth-child(3):hover .cards-wrapper,
+#aqi-cards .col-md-3:nth-child(3):hover .cards-wrapper {
+  border: 1px dashed #e9572a;
 }
 
-.AQI-categories a:hover {
-  text-decoration: none;
+#aqi-cards .col-md-2:nth-child(4):hover .cards-wrapper,
+#aqi-cards .col-md-3:nth-child(4):hover .cards-wrapper {
+  border: 1px dashed #ec4d9f;
 }
 
-.AQI-categories .col-md-4 {
-  margin-bottom: 1rem;
+#aqi-cards .col-md-2:nth-child(5):hover .cards-wrapper,
+#aqi-cards .col-md-3:nth-child(5):hover .cards-wrapper {
+  border: 1px dashed #9858a2;
 }
 
-.AQI-categories .col-md-4:nth-child(1) .service-card {
-  background: #34a12b;
-  border: 0;
+#aqi-cards .col-md-2:nth-child(6):hover .cards-wrapper,
+#aqi-cards .col-md-3:nth-child(6):hover .cards-wrapper {
+  border: 1px dashed #c11e2f;
 }
 
-.AQI-categories .col-md-4:nth-child(1) .service-card:hover {
-  background: #41c936 !important;
-  -webkit-box-shadow: 2px 4px 8px 0px #41c936;
-          box-shadow: 2px 4px 8px 0px #41c936;
+#aqi-cards .col-md-2:last-child div#card-image img {
+  width: 45px;
+  margin-top: 20px;
 }
 
-.AQI-categories .col-md-4:nth-child(2) .service-card {
-  background: #d4cc0f;
-  border: 0;
-}
-
-.AQI-categories .col-md-4:nth-child(2) .service-card:hover {
-  background: #f0e726 !important;
-  -webkit-box-shadow: 2px 4px 8px 0px #f0e726;
-          box-shadow: 2px 4px 8px 0px #f0e726;
-}
-
-.AQI-categories .col-md-4:nth-child(3) .service-card {
-  background: #e9572a;
-  border: 0;
-}
-
-.AQI-categories .col-md-4:nth-child(3) .service-card:hover {
-  background: #ee7b58 !important;
-  -webkit-box-shadow: 2px 4px 8px 0px #ee7b58;
-          box-shadow: 2px 4px 8px 0px #ee7b58;
-}
-
-.AQI-categories .col-md-4:nth-child(4) .service-card {
-  background: #ec4d9f;
-  border: 0;
-}
-
-.AQI-categories .col-md-4:nth-child(4) .service-card:hover {
-  background: #f17bb8 !important;
-  -webkit-box-shadow: 2px 4px 8px 0px #f17bb8;
-          box-shadow: 2px 4px 8px 0px #f17bb8;
-}
-
-.AQI-categories .col-md-4:nth-child(5) .service-card {
-  background: #9858a2;
-  border: 0;
-}
-
-.AQI-categories .col-md-4:nth-child(5) .service-card:hover {
-  background: #ad78b5 !important;
-  -webkit-box-shadow: 2px 4px 8px 0px #ad78b5;
-          box-shadow: 2px 4px 8px 0px #ad78b5;
-}
-
-.AQI-categories .col-md-4:nth-child(6) .service-card {
-  background: #c11e2f;
-  border: 0;
-}
-
-.AQI-categories .col-md-4:nth-child(6) .service-card:hover {
-  background: #df3345 !important;
-  -webkit-box-shadow: 2px 4px 8px 0px #df3345;
-          box-shadow: 2px 4px 8px 0px #df3345;
-}
-
-.AQI-categories .service-card {
-  border-radius: 1rem;
-}
-
-.AQI-categories .service-card .card-block {
+.cards-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0;
-  height: 125px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: #fff;
+  border: 1px dashed transparent;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 10px;
 }
 
-.AQI-categories .service-card .card-block img {
-  width: 20%;
-  min-width: 40px;
-  margin: 0 10px;
+.cards-wrapper:hover img {
+  -webkit-animation: avada 2s ease infinite;
+          animation: avada 2s ease infinite;
 }
 
-.AQI-categories .service-card .card-block h4.card-title {
-  margin: 0 10px;
+.cards-wrapper div#card-image {
+  height: 90px;
 }
 
-.AQI-categories .service-card .card-block h4.card-title p {
-  font-size: 12px;
-  margin: 5px 0 !important;
-  line-height: 1;
+.cards-wrapper div#card-info {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.cards-wrapper div#card-info h6#card-title {
   text-align: center;
+  padding: 2px 8px;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.cards-wrapper div#card-info p.card-desc {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.cards-wrapper div#card-image img {
+  max-width: 80px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
 }
 
 /* ---------------------------------------------------
@@ -621,16 +622,7 @@ footer.bg-secondary {
   }
 }
 
-@media (min-width: 992px) {
-  #hideShow {
-    display: none;
-  }
-}
-
 @media (max-width: 992px) {
-  #sidebar {
-    min-width: 190px;
-  }
   .prana-container p {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -648,20 +640,9 @@ footer.bg-secondary {
   .prana-container .image-wrapper img {
     width: 100%;
   }
-  .service-card .card-block img {
+  .cards-wrapper.card-block img {
     max-width: 60px;
     height: auto;
-  }
-  #sidebar .sidebar-header a.navbar-brand {
-    margin-right: 0;
-  }
-  .sidebar-header h3 {
-    position: relative;
-  }
-  .sidebar-header a#hideShow {
-    position: absolute;
-    top: 6px;
-    right: -10px;
   }
   .pm-wrapper {
     -webkit-box-pack: center;
@@ -704,35 +685,8 @@ footer.bg-secondary {
 }
 
 @media (max-width: 768px) {
-  #sidebar {
-    min-width: 200px;
-  }
   #content {
     padding: 25px;
-  }
-}
-
-@media (max-width: 767px) {
-  #sidebar {
-    margin-left: -250px;
-  }
-  #sidebar.active {
-    margin-left: 0;
-  }
-  .sidebar-main {
-    width: 0;
-  }
-  #sidebarCollapse span {
-    display: none;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
-  .col-md-4 {
-    min-width: 50%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
   }
 }
 
@@ -740,22 +694,6 @@ footer.bg-secondary {
   div#calculations {
     display: none;
   }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: "Nunito", sans-serif;
-  background-color: #f1f2f6;
 }
 
 header {
@@ -872,11 +810,69 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  .prana-container div#innerBox,
+  .image-wrapper {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    min-width: 100%;
+  }
+  ul#pills-tab li.nav-item {
+    min-width: 33% !important;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
+  p#tab-desc {
+    font-size: 14px;
+  }
+  div#aqi-cards .col-md-2 {
+    min-width: 50%;
+  }
   h1.title {
     font-size: 2rem;
   }
   p.description.text-center {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  ul#pills-tab li.nav-item {
+    min-width: 50% !important;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+  p#tab-desc {
+    font-size: 10px;
+  }
+}
+
+@-webkit-keyframes avada {
+  0% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes avada {
+  0% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=style.css.map */
